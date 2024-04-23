@@ -15,8 +15,11 @@ from pytorch_lightning.callbacks import LearningRateMonitor, ModelCheckpoint
 
 from preprocess_data import get_batch, build_vocab_embeddings, load_snli
 from models import AWEsEncoder, LSTMEncoder, BiLSTMEncoder, MLP_classifier
+# from sentEval_backup import sentEval
 
 GLOVE_PATH = "/GloVe_embeds/glove.840B.300d.txt"
+DATA_PATH = './SentEval/data'
+
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -56,13 +59,8 @@ class NLIModule(pl.LightningModule):
         self.glove_embeddings = nn.Embedding.from_pretrained(torch.FloatTensor(vocab.vectors))
         self.glove_embeddings.weight.requires_grad = False
         self.glove_embeddings = self.glove_embeddings.to(device)
-        #OR
-        # self.glove_embeddings = nn.Embedding(len(vocab), 300)
-        # self.glove_embeddings.weight.requires_grad = False
-        # self.glove_embeddings.weight.data.copy_(torch.from_numpy(vocab.vectors))
-        # self.glove_embeddings = self.glove_embeddings.to(device)
         
-        self.last_val_acc = None
+        self.last_val_acc = 0.0
 
 
     def forward(self, batch):
@@ -77,9 +75,6 @@ class NLIModule(pl.LightningModule):
         
         batch - batch of sentences with (premise, hypothesis, label) pairs
         '''
-        # Convert word indices to embeddings
-        # embedded_sentences = self.embeddings(batch)
-        
         # Extract the premise and hypothesis sentences from the batch
         # premises, hypothesis, labels = batch
         (premises_padded, hypotheses_padded, premises_lengths, hypothesis_lengths), _ = batch
@@ -131,6 +126,7 @@ class NLIModule(pl.LightningModule):
         
         return [optimizer], [scheduler]
     
+    
     def training_step(self, batch, batch_idx):
         # "batch" is the output of the training data loader.
         predictions = self.forward(batch)
@@ -149,16 +145,14 @@ class NLIModule(pl.LightningModule):
 
     def validation_step(self, batch, batch_idx): 
         prediction_logits = self.forward(batch)
-        _, _, labels = batch
+        (_, _, _, _), labels = batch
         labels = torch.tensor(labels).to(prediction_logits.device)
         val_loss = self.loss_module(prediction_logits, labels)
         predicted_labels = torch.argmax(prediction_logits, dim=1)
-        print("predicted labels: ", predicted_labels)
-        print("Labels: ", labels)
         val_acc = (labels == predicted_labels).float().mean()
-        # By default logs it per epoch (weighted average over batches)
-        self.log('val_acc', val_acc, on_step=False, on_epoch=True, prog_bar=True)
-        self.log('val_loss', val_loss, on_step=False, on_epoch=True, prog_bar=True)
+
+        self.log('val_acc', val_acc, on_step=False, on_epoch=True)
+        self.log('val_loss', val_loss, on_step=False, on_epoch=True)
 
         # save the validation accuracy
         self.last_val_acc = val_acc.item()  
@@ -166,7 +160,7 @@ class NLIModule(pl.LightningModule):
 
     def test_step(self, batch, batch_idx):
         prediction_logits = self.forward(batch)
-        _, _, labels = batch
+        (_, _, _, _), labels = batch
         labels = torch.tensor(labels).to(prediction_logits.device)
         test_loss = self.loss_module(prediction_logits, labels)
         predicted_labels = torch.argmax(prediction_logits, dim=1)
@@ -198,10 +192,8 @@ class PLCallback(pl.Callback):
 
     def __init__(self, minlr=1e-5):
         super().__init__()
-        self.minlr = 0.095
+        self.minlr = minlr
 
-        # initialize a field for the last validation accuracy so we can use it in the next method for comparison
-        self.last_val_acc = None
 
     def on_train_epoch_end(self, trainer, pl_module):
         '''
@@ -229,7 +221,6 @@ class LearningRateMonitor(pl.Callback):
     # VERSION 1
     def on_validation_epoch_end(self, trainer, pl_module):
         print("CAME IN HERE")
-        print("self.last_val_acc: ", self.last_val_acc)
         print("pl_module.last_val_acc: ", pl_module.last_val_acc)
 
         lr = trainer.optimizers[0].param_groups[0]['lr']
@@ -252,28 +243,6 @@ class LearningRateMonitor(pl.Callback):
         print("Current eval:", val_acc)
      
         
-    # VERSION 2
-    # def on_val_epoch_end(self, trainer, pl_module):
-
-    #     if pl_module.last_val_acc is not None and pl_module.last_val_acc < self.last_val_acc:
-    #         current_lr = trainer.optimizers[0].param_groups[0]['lr']
-    #         new_lr = current_lr / self.lr_shrink 
-        
-    #     optimizer_hparams_updated = self.hparams.optimizer_hparams.copy()
-    #     optimizer_hparams_updated['lr'] = new_lr
-
-    #     if pl_module.hparams.optimizer_name == "SGD":
-    #         new_optimizer = torch.optim.SGD(self.parameters(), **optimizer_hparams_updated)
-    #     if pl_module.hparams.optimizer_name == "Adam":
-    #         new_optimizer = torch.optim.AdamW(self.parameters(), **optimizer_hparams_updated)
-    #     trainer.optimizers = [new_optimizer]
-     
-    #     # we also need to create a new lr scheduler to use the new optimizer:
-    #     new_scheduler = torch.optim.lr_scheduler.StepLR(optimizer=new_optimizer, step_size=1, gamma=self.hparams.optimizer_hparams['lr_decay'])
-    #     trainer.lr_schedulers[0] = trainer.configure_schedulers([new_scheduler])
-        
-    #     # save the last validation accuracy
-    #     self.last_val_acc = pl_module.last_val_acc
 
 
 
@@ -315,7 +284,7 @@ def train_model(args, model_hparams, optimizer_hparams):
         trainer = pl.Trainer(
                     default_root_dir=args.log_dir,
                     callbacks=[lr_monitor, pl_callback, checkpoint_callback],
-                    max_epochs=100,
+                    max_epochs=30,
                     enable_progress_bar=True)
         trainer.logger._default_hp_metric = None
 
@@ -338,6 +307,9 @@ def train_model(args, model_hparams, optimizer_hparams):
     # test the model
     model.freeze()
     test_result = trainer.test(model, dataloaders=test_loader, verbose=True)
+
+
+    # sentEval(vocab, model, DATA_PATH, args.batch_size, path="/senteval_results/transfer_results.json")
 
     # return the test results
     return test_result
@@ -398,7 +370,3 @@ if __name__ == '__main__':
 
     #print the test result returned by the training 
     print(test_result) 
-
-
-# Run the following command to train the model:
-# python main.py --encoder_type AWE --optimizer sgd --lr 0.1 --lr_decay 0.99 --lr_shrink 5 --minlr 1e-5  --seed 42 --log_dir pl_logs/ --development

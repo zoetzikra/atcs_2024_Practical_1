@@ -1,0 +1,240 @@
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+Collecting package metadata (repodata.json): ...working... WARNING conda.models.version:get_matcher(535): Using .* with relational operator is superfluous and deprecated and will be removed in a future version of conda. Your spec was 1.7.1.*, but conda is ignoring the .* and treating it as 1.7.1
+WARNING conda.models.version:get_matcher(535): Using .* with relational operator is superfluous and deprecated and will be removed in a future version of conda. Your spec was 1.8.0.*, but conda is ignoring the .* and treating it as 1.8.0
+WARNING conda.models.version:get_matcher(535): Using .* with relational operator is superfluous and deprecated and will be removed in a future version of conda. Your spec was 1.6.0.*, but conda is ignoring the .* and treating it as 1.6.0
+WARNING conda.models.version:get_matcher(535): Using .* with relational operator is superfluous and deprecated and will be removed in a future version of conda. Your spec was 1.9.0.*, but conda is ignoring the .* and treating it as 1.9.0
+done
+Solving environment: ...working... done
+
+
+==> WARNING: A newer version of conda exists. <==
+  current version: 4.12.0
+  latest version: 24.3.0
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+
+Installing pip dependencies: ...working... Ran pip subprocess with arguments:
+['/home/scur0257/.conda/envs/atcs_2024/bin/python', '-m', 'pip', 'install', '-U', '-r', '/gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt']
+Pip subprocess output:
+Requirement already satisfied: pytorch-lightning==2.1.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from -r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 1)) (2.1.0)
+Requirement already satisfied: tensorboard==2.14.1 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from -r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 2)) (2.14.1)
+Requirement already satisfied: tabulate>=0.8.9 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from -r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 3)) (0.9.0)
+Requirement already satisfied: tqdm>=4.62.3 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from -r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 4)) (4.66.2)
+Requirement already satisfied: pillow>=8.0.1 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from -r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 5)) (10.3.0)
+Requirement already satisfied: notebook>=6.4.5 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from -r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (7.1.3)
+Requirement already satisfied: jupyterlab>=3.2.1 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from -r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 7)) (4.1.6)
+Requirement already satisfied: matplotlib>=3.4.3 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from -r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 8)) (3.8.4)
+Requirement already satisfied: seaborn>=0.11.2 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from -r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 9)) (0.13.2)
+Requirement already satisfied: ipywidgets>=7.6.5 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from -r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 10)) (8.1.2)
+Requirement already satisfied: datasets in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from -r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 11)) (2.12.0)
+Collecting datasets (from -r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 11))
+  Downloading datasets-2.19.0-py3-none-any.whl.metadata (19 kB)
+Requirement already satisfied: nltk in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from -r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 12)) (3.8.1)
+Collecting scikit-learn (from -r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 13))
+  Downloading scikit_learn-1.4.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+Requirement already satisfied: numpy>=1.17.2 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from pytorch-lightning==2.1.0->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 1)) (1.26.4)
+Requirement already satisfied: torch>=1.12.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from pytorch-lightning==2.1.0->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 1)) (2.1.0)
+Requirement already satisfied: PyYAML>=5.4 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from pytorch-lightning==2.1.0->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 1)) (6.0.1)
+Requirement already satisfied: fsspec>2021.06.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from fsspec[http]>2021.06.0->pytorch-lightning==2.1.0->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 1)) (2024.3.1)
+Requirement already satisfied: torchmetrics>=0.7.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from pytorch-lightning==2.1.0->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 1)) (1.3.2)
+Requirement already satisfied: packaging>=20.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from pytorch-lightning==2.1.0->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 1)) (24.0)
+Requirement already satisfied: typing-extensions>=4.0.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from pytorch-lightning==2.1.0->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 1)) (4.10.0)
+Requirement already satisfied: lightning-utilities>=0.8.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from pytorch-lightning==2.1.0->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 1)) (0.11.2)
+Requirement already satisfied: absl-py>=0.4 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 2)) (2.1.0)
+Requirement already satisfied: grpcio>=1.48.2 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 2)) (1.62.1)
+Requirement already satisfied: google-auth<3,>=1.6.3 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 2)) (2.29.0)
+Requirement already satisfied: google-auth-oauthlib<1.1,>=0.5 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 2)) (1.0.0)
+Requirement already satisfied: markdown>=2.6.8 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 2)) (3.6)
+Requirement already satisfied: protobuf>=3.19.6 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 2)) (5.26.1)
+Requirement already satisfied: requests<3,>=2.21.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 2)) (2.31.0)
+Requirement already satisfied: setuptools>=41.0.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 2)) (69.2.0)
+Requirement already satisfied: six>1.9 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 2)) (1.16.0)
+Requirement already satisfied: tensorboard-data-server<0.8.0,>=0.7.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 2)) (0.7.2)
+Requirement already satisfied: werkzeug>=1.0.1 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 2)) (3.0.2)
+Requirement already satisfied: jupyter-server<3,>=2.4.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (2.13.0)
+Requirement already satisfied: jupyterlab-server<3,>=2.22.1 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (2.25.4)
+Requirement already satisfied: notebook-shim<0.3,>=0.2 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (0.2.4)
+Requirement already satisfied: tornado>=6.2.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (6.4)
+Requirement already satisfied: async-lru>=1.0.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 7)) (2.0.4)
+Requirement already satisfied: httpx>=0.25.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 7)) (0.27.0)
+Requirement already satisfied: ipykernel>=6.5.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 7)) (6.29.4)
+Requirement already satisfied: jinja2>=3.0.3 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 7)) (3.1.3)
+Requirement already satisfied: jupyter-core in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 7)) (5.7.2)
+Requirement already satisfied: jupyter-lsp>=2.0.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 7)) (2.2.4)
+Requirement already satisfied: traitlets in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 7)) (5.14.2)
+Requirement already satisfied: contourpy>=1.0.1 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from matplotlib>=3.4.3->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 8)) (1.2.1)
+Requirement already satisfied: cycler>=0.10 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from matplotlib>=3.4.3->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 8)) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from matplotlib>=3.4.3->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 8)) (4.50.0)
+Requirement already satisfied: kiwisolver>=1.3.1 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from matplotlib>=3.4.3->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 8)) (1.4.5)
+Requirement already satisfied: pyparsing>=2.3.1 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from matplotlib>=3.4.3->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 8)) (3.1.2)
+Requirement already satisfied: python-dateutil>=2.7 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from matplotlib>=3.4.3->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 8)) (2.9.0)
+Requirement already satisfied: pandas>=1.2 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from seaborn>=0.11.2->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 9)) (2.2.1)
+Requirement already satisfied: comm>=0.1.3 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from ipywidgets>=7.6.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 10)) (0.2.2)
+Requirement already satisfied: ipython>=6.1.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from ipywidgets>=7.6.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 10)) (8.23.0)
+Requirement already satisfied: widgetsnbextension~=4.0.10 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from ipywidgets>=7.6.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 10)) (4.0.10)
+Requirement already satisfied: jupyterlab-widgets~=3.0.10 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from ipywidgets>=7.6.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 10)) (3.0.10)
+Requirement already satisfied: filelock in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from datasets->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 11)) (3.13.3)
+Requirement already satisfied: pyarrow>=12.0.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from datasets->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 11)) (15.0.2)
+Collecting pyarrow-hotfix (from datasets->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 11))
+  Downloading pyarrow_hotfix-0.6-py3-none-any.whl.metadata (3.6 kB)
+Requirement already satisfied: dill<0.3.9,>=0.3.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from datasets->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 11)) (0.3.6)
+Requirement already satisfied: xxhash in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from datasets->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 11)) (3.4.1)
+Requirement already satisfied: multiprocess in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from datasets->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 11)) (0.70.15)
+Requirement already satisfied: aiohttp in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from datasets->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 11)) (3.9.3)
+Requirement already satisfied: huggingface-hub>=0.21.2 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from datasets->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 11)) (0.22.2)
+Requirement already satisfied: click in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from nltk->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 12)) (8.1.7)
+Requirement already satisfied: joblib in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from nltk->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 12)) (1.4.0)
+Requirement already satisfied: regex>=2021.8.3 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from nltk->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 12)) (2024.4.16)
+Collecting scipy>=1.6.0 (from scikit-learn->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 13))
+  Downloading scipy-1.13.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.6/60.6 kB 12.1 MB/s eta 0:00:00
+Collecting threadpoolctl>=2.0.0 (from scikit-learn->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 13))
+  Downloading threadpoolctl-3.4.0-py3-none-any.whl.metadata (13 kB)
+Requirement already satisfied: aiosignal>=1.1.2 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from aiohttp->datasets->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 11)) (1.3.1)
+Requirement already satisfied: attrs>=17.3.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from aiohttp->datasets->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 11)) (23.2.0)
+Requirement already satisfied: frozenlist>=1.1.1 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from aiohttp->datasets->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 11)) (1.4.1)
+Requirement already satisfied: multidict<7.0,>=4.5 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from aiohttp->datasets->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 11)) (6.0.5)
+Requirement already satisfied: yarl<2.0,>=1.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from aiohttp->datasets->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 11)) (1.9.4)
+Requirement already satisfied: cachetools<6.0,>=2.0.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from google-auth<3,>=1.6.3->tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 2)) (5.3.3)
+Requirement already satisfied: pyasn1-modules>=0.2.1 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from google-auth<3,>=1.6.3->tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 2)) (0.4.0)
+Requirement already satisfied: rsa<5,>=3.1.4 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from google-auth<3,>=1.6.3->tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 2)) (4.9)
+Requirement already satisfied: requests-oauthlib>=0.7.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from google-auth-oauthlib<1.1,>=0.5->tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 2)) (2.0.0)
+Requirement already satisfied: anyio in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from httpx>=0.25.0->jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 7)) (4.3.0)
+Requirement already satisfied: certifi in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from httpx>=0.25.0->jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 7)) (2024.2.2)
+Requirement already satisfied: httpcore==1.* in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from httpx>=0.25.0->jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 7)) (1.0.5)
+Requirement already satisfied: idna in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from httpx>=0.25.0->jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 7)) (3.6)
+Requirement already satisfied: sniffio in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from httpx>=0.25.0->jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 7)) (1.3.1)
+Requirement already satisfied: h11<0.15,>=0.13 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from httpcore==1.*->httpx>=0.25.0->jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 7)) (0.14.0)
+Requirement already satisfied: debugpy>=1.6.5 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from ipykernel>=6.5.0->jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 7)) (1.8.1)
+Requirement already satisfied: jupyter-client>=6.1.12 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from ipykernel>=6.5.0->jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 7)) (8.6.1)
+Requirement already satisfied: matplotlib-inline>=0.1 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from ipykernel>=6.5.0->jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 7)) (0.1.6)
+Requirement already satisfied: nest-asyncio in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from ipykernel>=6.5.0->jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 7)) (1.6.0)
+Requirement already satisfied: psutil in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from ipykernel>=6.5.0->jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 7)) (5.9.8)
+Requirement already satisfied: pyzmq>=24 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from ipykernel>=6.5.0->jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 7)) (25.1.2)
+Requirement already satisfied: decorator in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from ipython>=6.1.0->ipywidgets>=7.6.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 10)) (5.1.1)
+Requirement already satisfied: jedi>=0.16 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from ipython>=6.1.0->ipywidgets>=7.6.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 10)) (0.19.1)
+Requirement already satisfied: prompt-toolkit<3.1.0,>=3.0.41 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from ipython>=6.1.0->ipywidgets>=7.6.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 10)) (3.0.43)
+Requirement already satisfied: pygments>=2.4.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from ipython>=6.1.0->ipywidgets>=7.6.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 10)) (2.17.2)
+Requirement already satisfied: stack-data in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from ipython>=6.1.0->ipywidgets>=7.6.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 10)) (0.6.3)
+Requirement already satisfied: pexpect>4.3 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from ipython>=6.1.0->ipywidgets>=7.6.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 10)) (4.9.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jinja2>=3.0.3->jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 7)) (2.1.5)
+Requirement already satisfied: platformdirs>=2.5 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jupyter-core->jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 7)) (4.2.0)
+Requirement already satisfied: argon2-cffi in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (23.1.0)
+Requirement already satisfied: jupyter-events>=0.9.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (0.10.0)
+Requirement already satisfied: jupyter-server-terminals in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (0.5.3)
+Requirement already satisfied: nbconvert>=6.4.4 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (7.16.3)
+Requirement already satisfied: nbformat>=5.3.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (5.10.4)
+Requirement already satisfied: overrides in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (7.7.0)
+Requirement already satisfied: prometheus-client in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (0.20.0)
+Requirement already satisfied: send2trash>=1.8.2 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (1.8.2)
+Requirement already satisfied: terminado>=0.8.3 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (0.18.1)
+Requirement already satisfied: websocket-client in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (1.7.0)
+Requirement already satisfied: babel>=2.10 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jupyterlab-server<3,>=2.22.1->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (2.14.0)
+Requirement already satisfied: json5>=0.9.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jupyterlab-server<3,>=2.22.1->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (0.9.24)
+Requirement already satisfied: jsonschema>=4.18.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jupyterlab-server<3,>=2.22.1->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (4.21.1)
+Requirement already satisfied: pytz>=2020.1 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from pandas>=1.2->seaborn>=0.11.2->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 9)) (2024.1)
+Requirement already satisfied: tzdata>=2022.7 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from pandas>=1.2->seaborn>=0.11.2->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 9)) (2024.1)
+Requirement already satisfied: charset-normalizer<4,>=2 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from requests<3,>=2.21.0->tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 2)) (3.3.2)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from requests<3,>=2.21.0->tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 2)) (2.2.1)
+Requirement already satisfied: sympy in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from torch>=1.12.0->pytorch-lightning==2.1.0->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 1)) (1.12)
+Requirement already satisfied: networkx in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from torch>=1.12.0->pytorch-lightning==2.1.0->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 1)) (3.2.1)
+Collecting dill<0.3.9,>=0.3.0 (from datasets->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 11))
+  Downloading dill-0.3.8-py3-none-any.whl.metadata (10 kB)
+Requirement already satisfied: parso<0.9.0,>=0.8.3 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jedi>=0.16->ipython>=6.1.0->ipywidgets>=7.6.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 10)) (0.8.3)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.22.1->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (2023.12.1)
+Requirement already satisfied: referencing>=0.28.4 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.22.1->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (0.34.0)
+Requirement already satisfied: rpds-py>=0.7.1 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.22.1->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (0.18.0)
+Requirement already satisfied: python-json-logger>=2.0.4 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jupyter-events>=0.9.0->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (2.0.7)
+Requirement already satisfied: rfc3339-validator in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jupyter-events>=0.9.0->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (0.1.4)
+Requirement already satisfied: rfc3986-validator>=0.1.1 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jupyter-events>=0.9.0->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (0.1.1)
+Requirement already satisfied: beautifulsoup4 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (4.12.3)
+Requirement already satisfied: bleach!=5.0.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (6.1.0)
+Requirement already satisfied: defusedxml in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (0.7.1)
+Requirement already satisfied: jupyterlab-pygments in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (0.3.0)
+Requirement already satisfied: mistune<4,>=2.0.3 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (3.0.2)
+Requirement already satisfied: nbclient>=0.5.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (0.10.0)
+Requirement already satisfied: pandocfilters>=1.4.1 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (1.5.1)
+Requirement already satisfied: tinycss2 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (1.2.1)
+Requirement already satisfied: fastjsonschema>=2.15 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from nbformat>=5.3.0->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (2.19.1)
+Requirement already satisfied: ptyprocess>=0.5 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from pexpect>4.3->ipython>=6.1.0->ipywidgets>=7.6.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 10)) (0.7.0)
+Requirement already satisfied: wcwidth in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from prompt-toolkit<3.1.0,>=3.0.41->ipython>=6.1.0->ipywidgets>=7.6.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 10)) (0.2.13)
+Requirement already satisfied: pyasn1<0.7.0,>=0.4.6 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from pyasn1-modules>=0.2.1->google-auth<3,>=1.6.3->tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 2)) (0.6.0)
+Requirement already satisfied: oauthlib>=3.0.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from requests-oauthlib>=0.7.0->google-auth-oauthlib<1.1,>=0.5->tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 2)) (3.2.2)
+Requirement already satisfied: argon2-cffi-bindings in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from argon2-cffi->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (21.2.0)
+Requirement already satisfied: executing>=1.2.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from stack-data->ipython>=6.1.0->ipywidgets>=7.6.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 10)) (2.0.1)
+Requirement already satisfied: asttokens>=2.1.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from stack-data->ipython>=6.1.0->ipywidgets>=7.6.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 10)) (2.4.1)
+Requirement already satisfied: pure-eval in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from stack-data->ipython>=6.1.0->ipywidgets>=7.6.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 10)) (0.2.2)
+Requirement already satisfied: mpmath>=0.19 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from sympy->torch>=1.12.0->pytorch-lightning==2.1.0->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 1)) (1.3.0)
+Requirement already satisfied: webencodings in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from bleach!=5.0.0->nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (0.5.1)
+Requirement already satisfied: fqdn in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.9.0->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (1.5.1)
+Requirement already satisfied: isoduration in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.9.0->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (20.11.0)
+Requirement already satisfied: jsonpointer>1.13 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.9.0->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (2.4)
+Requirement already satisfied: uri-template in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.9.0->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (1.3.0)
+Requirement already satisfied: webcolors>=1.11 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.9.0->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (1.13)
+Requirement already satisfied: cffi>=1.0.1 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from argon2-cffi-bindings->argon2-cffi->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (1.16.0)
+Requirement already satisfied: soupsieve>1.2 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from beautifulsoup4->nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (2.5)
+Requirement already satisfied: pycparser in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from cffi>=1.0.1->argon2-cffi-bindings->argon2-cffi->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (2.22)
+Requirement already satisfied: arrow>=0.15.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from isoduration->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.9.0->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (1.3.0)
+Requirement already satisfied: types-python-dateutil>=2.8.10 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from arrow>=0.15.0->isoduration->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.9.0->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/practical_1/condaenv.w57_49r4.requirements.txt (line 6)) (2.9.0.20240316)
+Downloading datasets-2.19.0-py3-none-any.whl (542 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 542.0/542.0 kB 68.6 MB/s eta 0:00:00
+Downloading scikit_learn-1.4.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.1/12.1 MB 179.3 MB/s eta 0:00:00
+Downloading scipy-1.13.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (38.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 38.6/38.6 MB 48.9 MB/s eta 0:00:00
+Downloading threadpoolctl-3.4.0-py3-none-any.whl (17 kB)
+Downloading dill-0.3.8-py3-none-any.whl (116 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 116.3/116.3 kB 25.1 MB/s eta 0:00:00
+Downloading pyarrow_hotfix-0.6-py3-none-any.whl (7.9 kB)
+Installing collected packages: threadpoolctl, scipy, pyarrow-hotfix, dill, scikit-learn, datasets
+  Attempting uninstall: dill
+    Found existing installation: dill 0.3.6
+    Uninstalling dill-0.3.6:
+      Successfully uninstalled dill-0.3.6
+  Attempting uninstall: datasets
+    Found existing installation: datasets 2.12.0
+    Uninstalling datasets-2.12.0:
+      Successfully uninstalled datasets-2.12.0
+Successfully installed datasets-2.19.0 dill-0.3.8 pyarrow-hotfix-0.6 scikit-learn-1.4.2 scipy-1.13.0 threadpoolctl-3.4.0
+
+done
+#
+# To activate this environment, use
+#
+#     $ conda activate atcs_2024
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+
+JOB STATISTICS
+==============
+Job ID: 5996236
+Cluster: snellius
+User/Group: scur0257/scur0257
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:01:52
+CPU Efficiency: 4.94% of 00:37:48 core-walltime
+Job Wall-clock time: 00:02:06
+Memory Utilized: 2.35 GB
+Memory Efficiency: 1.95% of 120.00 GB

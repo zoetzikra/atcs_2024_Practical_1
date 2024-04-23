@@ -1,0 +1,628 @@
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+Collecting package metadata (repodata.json): ...working... WARNING conda.models.version:get_matcher(535): Using .* with relational operator is superfluous and deprecated and will be removed in a future version of conda. Your spec was 1.8.0.*, but conda is ignoring the .* and treating it as 1.8.0
+WARNING conda.models.version:get_matcher(535): Using .* with relational operator is superfluous and deprecated and will be removed in a future version of conda. Your spec was 1.7.1.*, but conda is ignoring the .* and treating it as 1.7.1
+WARNING conda.models.version:get_matcher(535): Using .* with relational operator is superfluous and deprecated and will be removed in a future version of conda. Your spec was 1.6.0.*, but conda is ignoring the .* and treating it as 1.6.0
+WARNING conda.models.version:get_matcher(535): Using .* with relational operator is superfluous and deprecated and will be removed in a future version of conda. Your spec was 1.9.0.*, but conda is ignoring the .* and treating it as 1.9.0
+done
+Solving environment: ...working... done
+
+
+==> WARNING: A newer version of conda exists. <==
+  current version: 4.12.0
+  latest version: 24.3.0
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+
+
+Downloading and Extracting Packages
+gnutls-3.6.13        | 2.0 MB    |            |   0% gnutls-3.6.13        | 2.0 MB    | ########## | 100% gnutls-3.6.13        | 2.0 MB    | ########## | 100% 
+pip-23.3.1           | 1.3 MB    |            |   0% pip-23.3.1           | 1.3 MB    | ########## | 100% pip-23.3.1           | 1.3 MB    | ########## | 100% 
+libblas-3.9.0        | 13 KB     |            |   0% libblas-3.9.0        | 13 KB     | ########## | 100% 
+liblapack-3.9.0      | 12 KB     |            |   0% liblapack-3.9.0      | 12 KB     | ########## | 100% 
+_libgcc_mutex-0.1    | 3 KB      |            |   0% _libgcc_mutex-0.1    | 3 KB      | ########## | 100% 
+networkx-3.2.1       | 1.1 MB    |            |   0% networkx-3.2.1       | 1.1 MB    | ########## | 100% networkx-3.2.1       | 1.1 MB    | ########## | 100% 
+freetype-2.12.1      | 620 KB    |            |   0% freetype-2.12.1      | 620 KB    | ########## | 100% freetype-2.12.1      | 620 KB    | ########## | 100% 
+libcufft-10.9.0.58   | 142.8 MB  |            |   0% libcufft-10.9.0.58   | 142.8 MB  | #3         |  14% libcufft-10.9.0.58   | 142.8 MB  | ###7       |  37% libcufft-10.9.0.58   | 142.8 MB  | #####9     |  60% libcufft-10.9.0.58   | 142.8 MB  | ########   |  81% libcufft-10.9.0.58   | 142.8 MB  | ########## | 100% 
+typing_extensions-4. | 36 KB     |            |   0% typing_extensions-4. | 36 KB     | ########## | 100% typing_extensions-4. | 36 KB     | ########## | 100% 
+libnsl-2.0.1         | 33 KB     |            |   0% libnsl-2.0.1         | 33 KB     | ########## | 100% libnsl-2.0.1         | 33 KB     | ########## | 100% 
+gmpy2-2.1.2          | 215 KB    |            |   0% gmpy2-2.1.2          | 215 KB    | ########## | 100% 
+cuda-libraries-11.8. | 1 KB      |            |   0% cuda-libraries-11.8. | 1 KB      | ########## | 100% 
+python_abi-3.11      | 6 KB      |            |   0% python_abi-3.11      | 6 KB      | ########## | 100% python_abi-3.11      | 6 KB      | ########## | 100% 
+libjpeg-turbo-2.0.0  | 950 KB    |            |   0% libjpeg-turbo-2.0.0  | 950 KB    | ########## | 100% libjpeg-turbo-2.0.0  | 950 KB    | ########## | 100% 
+cuda-nvtx-11.8.86    | 57 KB     |            |   0% cuda-nvtx-11.8.86    | 57 KB     | ########## | 100% 
+libnpp-11.8.0.86     | 147.8 MB  |            |   0% libnpp-11.8.0.86     | 147.8 MB  | #1         |  12% libnpp-11.8.0.86     | 147.8 MB  | ##3        |  23% libnpp-11.8.0.86     | 147.8 MB  | ###4       |  34% libnpp-11.8.0.86     | 147.8 MB  | #####4     |  54% libnpp-11.8.0.86     | 147.8 MB  | #######6   |  76% libnpp-11.8.0.86     | 147.8 MB  | #########4 |  95% libnpp-11.8.0.86     | 147.8 MB  | ########## | 100% 
+idna-3.6             | 49 KB     |            |   0% idna-3.6             | 49 KB     | ########## | 100% idna-3.6             | 49 KB     | ########## | 100% 
+cuda-runtime-11.8.0  | 1 KB      |            |   0% cuda-runtime-11.8.0  | 1 KB      | ########## | 100% 
+openssl-3.2.1        | 2.7 MB    |            |   0% openssl-3.2.1        | 2.7 MB    | ########## | 100% openssl-3.2.1        | 2.7 MB    | ########## | 100% 
+libiconv-1.17        | 689 KB    |            |   0% libiconv-1.17        | 689 KB    | ########## | 100% libiconv-1.17        | 689 KB    | ########## | 100% 
+libnvjpeg-11.9.0.86  | 2.4 MB    |            |   0% libnvjpeg-11.9.0.86  | 2.4 MB    | ########## | 100% libnvjpeg-11.9.0.86  | 2.4 MB    | ########## | 100% 
+zlib-1.2.13          | 91 KB     |            |   0% zlib-1.2.13          | 91 KB     | ########## | 100% zlib-1.2.13          | 91 KB     | ########## | 100% 
+nettle-3.6           | 6.5 MB    |            |   0% nettle-3.6           | 6.5 MB    | ########## | 100% nettle-3.6           | 6.5 MB    | ########## | 100% 
+requests-2.31.0      | 55 KB     |            |   0% requests-2.31.0      | 55 KB     | ########## | 100% requests-2.31.0      | 55 KB     | ########## | 100% 
+xz-5.2.6             | 409 KB    |            |   0% xz-5.2.6             | 409 KB    | ########## | 100% xz-5.2.6             | 409 KB    | ########## | 100% 
+mkl-devel-2022.1.0   | 25 KB     |            |   0% mkl-devel-2022.1.0   | 25 KB     | ########## | 100% 
+torchtriton-2.1.0    | 91.0 MB   |            |   0% torchtriton-2.1.0    | 91.0 MB   | ##6        |  27% torchtriton-2.1.0    | 91.0 MB   | ######2    |  63% torchtriton-2.1.0    | 91.0 MB   | #########8 |  98% torchtriton-2.1.0    | 91.0 MB   | ########## | 100% 
+libwebp-base-1.3.2   | 392 KB    |            |   0% libwebp-base-1.3.2   | 392 KB    | ########## | 100% libwebp-base-1.3.2   | 392 KB    | ########## | 100% 
+libstdcxx-ng-13.2.0  | 3.7 MB    |            |   0% libstdcxx-ng-13.2.0  | 3.7 MB    | ########## | 100% libstdcxx-ng-13.2.0  | 3.7 MB    | ########## | 100% 
+liblapacke-3.9.0     | 12 KB     |            |   0% liblapacke-3.9.0     | 12 KB     | ########## | 100% 
+pytorch-cuda-11.8    | 3 KB      |            |   0% pytorch-cuda-11.8    | 3 KB      | ########## | 100% 
+libexpat-2.6.2       | 72 KB     |            |   0% libexpat-2.6.2       | 72 KB     | ########## | 100% libexpat-2.6.2       | 72 KB     | ########## | 100% 
+libxcb-1.13          | 391 KB    |            |   0% libxcb-1.13          | 391 KB    | ########## | 100% libxcb-1.13          | 391 KB    | ########## | 100% 
+mkl-include-2022.1.0 | 745 KB    |            |   0% mkl-include-2022.1.0 | 745 KB    | ########## | 100% mkl-include-2022.1.0 | 745 KB    | ########## | 100% 
+lcms2-2.15           | 235 KB    |            |   0% lcms2-2.15           | 235 KB    | ########## | 100% lcms2-2.15           | 235 KB    | ########## | 100% 
+jpeg-9e              | 269 KB    |            |   0% jpeg-9e              | 269 KB    | ########## | 100% 
+libuuid-2.38.1       | 33 KB     |            |   0% libuuid-2.38.1       | 33 KB     | ########## | 100% libuuid-2.38.1       | 33 KB     | ########## | 100% 
+libgfortran-ng-13.2. | 23 KB     |            |   0% libgfortran-ng-13.2. | 23 KB     | ########## | 100% libgfortran-ng-13.2. | 23 KB     | ########## | 100% 
+icu-73.2             | 11.5 MB   |            |   0% icu-73.2             | 11.5 MB   | ########## | 100% icu-73.2             | 11.5 MB   | ########## | 100% 
+ncurses-6.4.20240210 | 875 KB    |            |   0% ncurses-6.4.20240210 | 875 KB    | ########## | 100% ncurses-6.4.20240210 | 875 KB    | ########## | 100% 
+pytorch-mutex-1.0    | 3 KB      |            |   0% pytorch-mutex-1.0    | 3 KB      | ########## | 100% 
+sympy-1.12           | 4.1 MB    |            |   0% sympy-1.12           | 4.1 MB    | ########## | 100% sympy-1.12           | 4.1 MB    | ########## | 100% 
+markupsafe-2.1.5     | 27 KB     |            |   0% markupsafe-2.1.5     | 27 KB     | ########## | 100% markupsafe-2.1.5     | 27 KB     | ########## | 100% 
+gmp-6.3.0            | 556 KB    |            |   0% gmp-6.3.0            | 556 KB    | ########## | 100% gmp-6.3.0            | 556 KB    | ########## | 100% 
+wheel-0.43.0         | 57 KB     |            |   0% wheel-0.43.0         | 57 KB     | ########## | 100% wheel-0.43.0         | 57 KB     | ########## | 100% 
+readline-8.2         | 275 KB    |            |   0% readline-8.2         | 275 KB    | ########## | 100% readline-8.2         | 275 KB    | ########## | 100% 
+libcusparse-11.7.5.8 | 176.3 MB  |            |   0% libcusparse-11.7.5.8 | 176.3 MB  | 3          |   4% libcusparse-11.7.5.8 | 176.3 MB  | ##2        |  23% libcusparse-11.7.5.8 | 176.3 MB  | ###9       |  39% libcusparse-11.7.5.8 | 176.3 MB  | #####3     |  54% libcusparse-11.7.5.8 | 176.3 MB  | ######8    |  68% libcusparse-11.7.5.8 | 176.3 MB  | ########   |  81% libcusparse-11.7.5.8 | 176.3 MB  | #########  |  90% libcusparse-11.7.5.8 | 176.3 MB  | ########## | 100% libcusparse-11.7.5.8 | 176.3 MB  | ########## | 100% 
+tzdata-2024a         | 117 KB    |            |   0% tzdata-2024a         | 117 KB    | ########## | 100% tzdata-2024a         | 117 KB    | ########## | 100% 
+libcusolver-11.4.1.4 | 96.5 MB   |            |   0% libcusolver-11.4.1.4 | 96.5 MB   | ##4        |  25% libcusolver-11.4.1.4 | 96.5 MB   | #####8     |  59% libcusolver-11.4.1.4 | 96.5 MB   | ########9  |  89% libcusolver-11.4.1.4 | 96.5 MB   | ########## | 100% 
+setuptools-69.2.0    | 460 KB    |            |   0% setuptools-69.2.0    | 460 KB    | ########## | 100% setuptools-69.2.0    | 460 KB    | ########## | 100% 
+libhwloc-2.9.3       | 2.5 MB    |            |   0% libhwloc-2.9.3       | 2.5 MB    | ########## | 100% libhwloc-2.9.3       | 2.5 MB    | ########## | 100% 
+libcurand-10.3.5.147 | 51.8 MB   |            |   0% libcurand-10.3.5.147 | 51.8 MB   | ####6      |  46% libcurand-10.3.5.147 | 51.8 MB   | ########## | 100% libcurand-10.3.5.147 | 51.8 MB   | ########## | 100% 
+libgcc-ng-13.2.0     | 752 KB    |            |   0% libgcc-ng-13.2.0     | 752 KB    | ########## | 100% libgcc-ng-13.2.0     | 752 KB    | ########## | 100% 
+torchvision-0.16.0   | 8.5 MB    |            |   0% torchvision-0.16.0   | 8.5 MB    | ########## | 100% torchvision-0.16.0   | 8.5 MB    | ########## | 100% 
+xorg-libxdmcp-1.1.3  | 19 KB     |            |   0% xorg-libxdmcp-1.1.3  | 19 KB     | ########## | 100% 
+jinja2-3.1.3         | 109 KB    |            |   0% jinja2-3.1.3         | 109 KB    | ########## | 100% jinja2-3.1.3         | 109 KB    | ########## | 100% 
+openh264-2.1.1       | 1.5 MB    |            |   0% openh264-2.1.1       | 1.5 MB    | ########## | 100% openh264-2.1.1       | 1.5 MB    | ########## | 100% 
+zstd-1.5.5           | 532 KB    |            |   0% zstd-1.5.5           | 532 KB    | ########## | 100% zstd-1.5.5           | 532 KB    | ########## | 100% 
+brotli-python-1.1.0  | 343 KB    |            |   0% brotli-python-1.1.0  | 343 KB    | ########## | 100% brotli-python-1.1.0  | 343 KB    | ########## | 100% 
+mpfr-4.2.1           | 626 KB    |            |   0% mpfr-4.2.1           | 626 KB    | ########## | 100% mpfr-4.2.1           | 626 KB    | ########## | 100% 
+libcufile-1.9.1.3    | 1.0 MB    |            |   0% libcufile-1.9.1.3    | 1.0 MB    | ########## | 100% libcufile-1.9.1.3    | 1.0 MB    | ########## | 100% 
+lerc-4.0.0           | 275 KB    |            |   0% lerc-4.0.0           | 275 KB    | ########## | 100% 
+libxml2-2.12.6       | 689 KB    |            |   0% libxml2-2.12.6       | 689 KB    | ########## | 100% libxml2-2.12.6       | 689 KB    | ########## | 100% 
+cuda-cupti-11.8.87   | 25.3 MB   |            |   0% cuda-cupti-11.8.87   | 25.3 MB   | ########3  |  84% cuda-cupti-11.8.87   | 25.3 MB   | ########## | 100% 
+blas-2.116           | 13 KB     |            |   0% blas-2.116           | 13 KB     | ########## | 100% 
+tbb-2021.11.0        | 191 KB    |            |   0% tbb-2021.11.0        | 191 KB    | ########## | 100% tbb-2021.11.0        | 191 KB    | ########## | 100% 
+ld_impl_linux-64-2.4 | 688 KB    |            |   0% ld_impl_linux-64-2.4 | 688 KB    | ########## | 100% ld_impl_linux-64-2.4 | 688 KB    | ########## | 100% 
+torchaudio-2.1.0     | 6.2 MB    |            |   0% torchaudio-2.1.0     | 6.2 MB    | ########## | 100% torchaudio-2.1.0     | 6.2 MB    | ########## | 100% 
+libcblas-3.9.0       | 12 KB     |            |   0% libcblas-3.9.0       | 12 KB     | ########## | 100% 
+yaml-0.2.5           | 87 KB     |            |   0% yaml-0.2.5           | 87 KB     | ########## | 100% 
+cuda-nvrtc-11.8.89   | 19.1 MB   |            |   0% cuda-nvrtc-11.8.89   | 19.1 MB   | ########## | 100% cuda-nvrtc-11.8.89   | 19.1 MB   | ########## | 100% 
+mkl-2022.1.0         | 199.6 MB  |            |   0% mkl-2022.1.0         | 199.6 MB  | 9          |  10% mkl-2022.1.0         | 199.6 MB  | ##2        |  22% mkl-2022.1.0         | 199.6 MB  | ###8       |  39% mkl-2022.1.0         | 199.6 MB  | #####5     |  55% mkl-2022.1.0         | 199.6 MB  | #######    |  70% mkl-2022.1.0         | 199.6 MB  | ########3  |  84% mkl-2022.1.0         | 199.6 MB  | ########## | 100% mkl-2022.1.0         | 199.6 MB  | ########## | 100% 
+libsqlite-3.45.2     | 837 KB    |            |   0% libsqlite-3.45.2     | 837 KB    | ########## | 100% libsqlite-3.45.2     | 837 KB    | ########## | 100% 
+numpy-1.26.4         | 7.7 MB    |            |   0% numpy-1.26.4         | 7.7 MB    | ########## | 100% numpy-1.26.4         | 7.7 MB    | ########## | 100% 
+llvm-openmp-15.0.7   | 3.1 MB    |            |   0% llvm-openmp-15.0.7   | 3.1 MB    | ########## | 100% llvm-openmp-15.0.7   | 3.1 MB    | ########## | 100% 
+openjpeg-2.5.0       | 344 KB    |            |   0% openjpeg-2.5.0       | 344 KB    | ########## | 100% openjpeg-2.5.0       | 344 KB    | ########## | 100% 
+ffmpeg-4.3           | 9.9 MB    |            |   0% ffmpeg-4.3           | 9.9 MB    | ########## | 100% ffmpeg-4.3           | 9.9 MB    | ########## | 100% 
+libzlib-1.2.13       | 60 KB     |            |   0% libzlib-1.2.13       | 60 KB     | ########## | 100% libzlib-1.2.13       | 60 KB     | ########## | 100% 
+pyyaml-6.0.1         | 196 KB    |            |   0% pyyaml-6.0.1         | 196 KB    | ########## | 100% pyyaml-6.0.1         | 196 KB    | ########## | 100% 
+pillow-9.4.0         | 44.6 MB   |            |   0% pillow-9.4.0         | 44.6 MB   | #####3     |  54% pillow-9.4.0         | 44.6 MB   | ########## | 100% 
+lame-3.100           | 496 KB    |            |   0% lame-3.100           | 496 KB    | ########## | 100% lame-3.100           | 496 KB    | ########## | 100% 
+libffi-3.4.2         | 57 KB     |            |   0% libffi-3.4.2         | 57 KB     | ########## | 100% 
+blas-devel-3.9.0     | 12 KB     |            |   0% blas-devel-3.9.0     | 12 KB     | ########## | 100% 
+libgfortran5-13.2.0  | 1.4 MB    |            |   0% libgfortran5-13.2.0  | 1.4 MB    | ########## | 100% libgfortran5-13.2.0  | 1.4 MB    | ########## | 100% 
+urllib3-2.2.1        | 92 KB     |            |   0% urllib3-2.2.1        | 92 KB     | ########## | 100% urllib3-2.2.1        | 92 KB     | ########## | 100% 
+libdeflate-1.17      | 63 KB     |            |   0% libdeflate-1.17      | 63 KB     | ########## | 100% libdeflate-1.17      | 63 KB     | ########## | 100% 
+pthread-stubs-0.4    | 5 KB      |            |   0% pthread-stubs-0.4    | 5 KB      | ########## | 100% 
+charset-normalizer-3 | 46 KB     |            |   0% charset-normalizer-3 | 46 KB     | ########## | 100% charset-normalizer-3 | 46 KB     | ########## | 100% 
+ca-certificates-2024 | 152 KB    |            |   0% ca-certificates-2024 | 152 KB    | ########## | 100% ca-certificates-2024 | 152 KB    | ########## | 100% 
+libtiff-4.5.0        | 397 KB    |            |   0% libtiff-4.5.0        | 397 KB    | ########## | 100% libtiff-4.5.0        | 397 KB    | ########## | 100% 
+pytorch-2.1.0        | 1.46 GB   |            |   0% pytorch-2.1.0        | 1.46 GB   | 1          |   2% pytorch-2.1.0        | 1.46 GB   | 3          |   3% pytorch-2.1.0        | 1.46 GB   | 5          |   5% pytorch-2.1.0        | 1.46 GB   | 7          |   7% pytorch-2.1.0        | 1.46 GB   | 9          |   9% pytorch-2.1.0        | 1.46 GB   | #1         |  11% pytorch-2.1.0        | 1.46 GB   | #3         |  14% pytorch-2.1.0        | 1.46 GB   | #6         |  16% pytorch-2.1.0        | 1.46 GB   | #8         |  18% pytorch-2.1.0        | 1.46 GB   | ##         |  21% pytorch-2.1.0        | 1.46 GB   | ##2        |  23% pytorch-2.1.0        | 1.46 GB   | ##4        |  25% pytorch-2.1.0        | 1.46 GB   | ##7        |  27% pytorch-2.1.0        | 1.46 GB   | ##9        |  29% pytorch-2.1.0        | 1.46 GB   | ###1       |  32% pytorch-2.1.0        | 1.46 GB   | ###3       |  34% pytorch-2.1.0        | 1.46 GB   | ###5       |  36% pytorch-2.1.0        | 1.46 GB   | ###8       |  38% pytorch-2.1.0        | 1.46 GB   | ####       |  40% pytorch-2.1.0        | 1.46 GB   | ####2      |  42% pytorch-2.1.0        | 1.46 GB   | ####4      |  45% pytorch-2.1.0        | 1.46 GB   | ####6      |  47% pytorch-2.1.0        | 1.46 GB   | ####8      |  49% pytorch-2.1.0        | 1.46 GB   | #####1     |  51% pytorch-2.1.0        | 1.46 GB   | #####3     |  54% pytorch-2.1.0        | 1.46 GB   | #####5     |  56% pytorch-2.1.0        | 1.46 GB   | #####8     |  58% pytorch-2.1.0        | 1.46 GB   | ######     |  60% pytorch-2.1.0        | 1.46 GB   | ######2    |  63% pytorch-2.1.0        | 1.46 GB   | ######4    |  65% pytorch-2.1.0        | 1.46 GB   | ######7    |  67% pytorch-2.1.0        | 1.46 GB   | ######9    |  70% pytorch-2.1.0        | 1.46 GB   | #######1   |  72% pytorch-2.1.0        | 1.46 GB   | #######4   |  74% pytorch-2.1.0        | 1.46 GB   | #######6   |  76% pytorch-2.1.0        | 1.46 GB   | #######8   |  79% pytorch-2.1.0        | 1.46 GB   | ########1  |  81% pytorch-2.1.0        | 1.46 GB   | ########3  |  83% pytorch-2.1.0        | 1.46 GB   | ########5  |  86% pytorch-2.1.0        | 1.46 GB   | ########7  |  88% pytorch-2.1.0        | 1.46 GB   | #########  |  90% pytorch-2.1.0        | 1.46 GB   | #########2 |  92% pytorch-2.1.0        | 1.46 GB   | #########4 |  94% pytorch-2.1.0        | 1.46 GB   | #########6 |  97% pytorch-2.1.0        | 1.46 GB   | #########8 |  99% pytorch-2.1.0        | 1.46 GB   | ########## | 100% 
+_openmp_mutex-4.5    | 6 KB      |            |   0% _openmp_mutex-4.5    | 6 KB      | ########## | 100% 
+python-3.11.5        | 29.4 MB   |            |   0% python-3.11.5        | 29.4 MB   | ####3      |  44% python-3.11.5        | 29.4 MB   | ########7  |  88% python-3.11.5        | 29.4 MB   | ########## | 100% 
+cuda-cudart-11.8.89  | 197 KB    |            |   0% cuda-cudart-11.8.89  | 197 KB    | ########## | 100% 
+tk-8.6.13            | 3.2 MB    |            |   0% tk-8.6.13            | 3.2 MB    | ########## | 100% tk-8.6.13            | 3.2 MB    | ########## | 100% 
+pysocks-1.7.1        | 19 KB     |            |   0% pysocks-1.7.1        | 19 KB     | ########## | 100% 
+certifi-2024.2.2     | 157 KB    |            |   0% certifi-2024.2.2     | 157 KB    | ########## | 100% certifi-2024.2.2     | 157 KB    | ########## | 100% 
+bzip2-1.0.8          | 248 KB    |            |   0% bzip2-1.0.8          | 248 KB    | ########## | 100% bzip2-1.0.8          | 248 KB    | ########## | 100% 
+libpng-1.6.43        | 281 KB    |            |   0% libpng-1.6.43        | 281 KB    | ########## | 100% libpng-1.6.43        | 281 KB    | ########## | 100% 
+libcublas-11.11.3.6  | 364.0 MB  |            |   0% libcublas-11.11.3.6  | 364.0 MB  | 1          |   2% libcublas-11.11.3.6  | 364.0 MB  | 9          |   9% libcublas-11.11.3.6  | 364.0 MB  | #5         |  15% libcublas-11.11.3.6  | 364.0 MB  | ##3        |  24% libcublas-11.11.3.6  | 364.0 MB  | ##9        |  30% libcublas-11.11.3.6  | 364.0 MB  | ###6       |  36% libcublas-11.11.3.6  | 364.0 MB  | ####3      |  44% libcublas-11.11.3.6  | 364.0 MB  | #####3     |  53% libcublas-11.11.3.6  | 364.0 MB  | ######2    |  63% libcublas-11.11.3.6  | 364.0 MB  | #######2   |  72% libcublas-11.11.3.6  | 364.0 MB  | ########1  |  81% libcublas-11.11.3.6  | 364.0 MB  | #########  |  91% libcublas-11.11.3.6  | 364.0 MB  | #########9 | 100% libcublas-11.11.3.6  | 364.0 MB  | ########## | 100% 
+xorg-libxau-1.0.11   | 14 KB     |            |   0% xorg-libxau-1.0.11   | 14 KB     | ########## | 100% xorg-libxau-1.0.11   | 14 KB     | ########## | 100% 
+mpmath-1.3.0         | 428 KB    |            |   0% mpmath-1.3.0         | 428 KB    | ########## | 100% mpmath-1.3.0         | 428 KB    | ########## | 100% 
+mpc-1.3.1            | 114 KB    |            |   0% mpc-1.3.1            | 114 KB    | ########## | 100% mpc-1.3.1            | 114 KB    | ########## | 100% 
+filelock-3.13.3      | 15 KB     |            |   0% filelock-3.13.3      | 15 KB     | ########## | 100% filelock-3.13.3      | 15 KB     | ########## | 100% 
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+Installing pip dependencies: ...working... Ran pip subprocess with arguments:
+['/home/scur0257/.conda/envs/atcs_2024/bin/python', '-m', 'pip', 'install', '-U', '-r', '/gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt']
+Pip subprocess output:
+Collecting pytorch-lightning==2.1.0 (from -r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 1))
+  Downloading pytorch_lightning-2.1.0-py3-none-any.whl.metadata (23 kB)
+Collecting tensorboard==2.14.1 (from -r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 2))
+  Downloading tensorboard-2.14.1-py3-none-any.whl.metadata (1.7 kB)
+Collecting tabulate>=0.8.9 (from -r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 3))
+  Downloading tabulate-0.9.0-py3-none-any.whl.metadata (34 kB)
+Collecting tqdm>=4.62.3 (from -r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 4))
+  Downloading tqdm-4.66.2-py3-none-any.whl.metadata (57 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.6/57.6 kB 14.4 MB/s eta 0:00:00
+Requirement already satisfied: pillow>=8.0.1 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from -r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 5)) (9.4.0)
+Collecting pillow>=8.0.1 (from -r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 5))
+  Downloading pillow-10.3.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (9.2 kB)
+Collecting notebook>=6.4.5 (from -r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading notebook-7.1.2-py3-none-any.whl.metadata (10 kB)
+Collecting jupyterlab>=3.2.1 (from -r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 7))
+  Downloading jupyterlab-4.1.5-py3-none-any.whl.metadata (15 kB)
+Collecting matplotlib>=3.4.3 (from -r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 8))
+  Downloading matplotlib-3.8.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.8 kB)
+Collecting seaborn>=0.11.2 (from -r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 9))
+  Downloading seaborn-0.13.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting ipywidgets>=7.6.5 (from -r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 10))
+  Downloading ipywidgets-8.1.2-py3-none-any.whl.metadata (2.4 kB)
+Requirement already satisfied: numpy>=1.17.2 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from pytorch-lightning==2.1.0->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 1)) (1.26.4)
+Requirement already satisfied: torch>=1.12.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from pytorch-lightning==2.1.0->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 1)) (2.1.0)
+Requirement already satisfied: PyYAML>=5.4 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from pytorch-lightning==2.1.0->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 1)) (6.0.1)
+Collecting fsspec>2021.06.0 (from fsspec[http]>2021.06.0->pytorch-lightning==2.1.0->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 1))
+  Downloading fsspec-2024.3.1-py3-none-any.whl.metadata (6.8 kB)
+Collecting torchmetrics>=0.7.0 (from pytorch-lightning==2.1.0->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 1))
+  Downloading torchmetrics-1.3.2-py3-none-any.whl.metadata (19 kB)
+Collecting packaging>=20.0 (from pytorch-lightning==2.1.0->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 1))
+  Downloading packaging-24.0-py3-none-any.whl.metadata (3.2 kB)
+Requirement already satisfied: typing-extensions>=4.0.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from pytorch-lightning==2.1.0->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 1)) (4.10.0)
+Collecting lightning-utilities>=0.8.0 (from pytorch-lightning==2.1.0->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 1))
+  Downloading lightning_utilities-0.11.2-py3-none-any.whl.metadata (4.7 kB)
+Collecting absl-py>=0.4 (from tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 2))
+  Downloading absl_py-2.1.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting grpcio>=1.48.2 (from tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 2))
+  Downloading grpcio-1.62.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.0 kB)
+Collecting google-auth<3,>=1.6.3 (from tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 2))
+  Downloading google_auth-2.29.0-py2.py3-none-any.whl.metadata (4.7 kB)
+Collecting google-auth-oauthlib<1.1,>=0.5 (from tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 2))
+  Downloading google_auth_oauthlib-1.0.0-py2.py3-none-any.whl.metadata (2.7 kB)
+Collecting markdown>=2.6.8 (from tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 2))
+  Downloading Markdown-3.6-py3-none-any.whl.metadata (7.0 kB)
+Collecting protobuf>=3.19.6 (from tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 2))
+  Downloading protobuf-5.26.1-cp37-abi3-manylinux2014_x86_64.whl.metadata (592 bytes)
+Requirement already satisfied: requests<3,>=2.21.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 2)) (2.31.0)
+Requirement already satisfied: setuptools>=41.0.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 2)) (69.2.0)
+Collecting six>1.9 (from tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 2))
+  Downloading six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
+Collecting tensorboard-data-server<0.8.0,>=0.7.0 (from tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 2))
+  Downloading tensorboard_data_server-0.7.2-py3-none-any.whl.metadata (1.1 kB)
+Collecting werkzeug>=1.0.1 (from tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 2))
+  Downloading werkzeug-3.0.2-py3-none-any.whl.metadata (4.1 kB)
+Collecting jupyter-server<3,>=2.4.0 (from notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading jupyter_server-2.13.0-py3-none-any.whl.metadata (8.4 kB)
+Collecting jupyterlab-server<3,>=2.22.1 (from notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading jupyterlab_server-2.25.4-py3-none-any.whl.metadata (5.9 kB)
+Collecting notebook-shim<0.3,>=0.2 (from notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading notebook_shim-0.2.4-py3-none-any.whl.metadata (4.0 kB)
+Collecting tornado>=6.2.0 (from notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading tornado-6.4-cp38-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.5 kB)
+Collecting async-lru>=1.0.0 (from jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 7))
+  Downloading async_lru-2.0.4-py3-none-any.whl.metadata (4.5 kB)
+Collecting httpx>=0.25.0 (from jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 7))
+  Downloading httpx-0.27.0-py3-none-any.whl.metadata (7.2 kB)
+Collecting ipykernel (from jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 7))
+  Downloading ipykernel-6.29.4-py3-none-any.whl.metadata (6.3 kB)
+Requirement already satisfied: jinja2>=3.0.3 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 7)) (3.1.3)
+Collecting jupyter-core (from jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 7))
+  Downloading jupyter_core-5.7.2-py3-none-any.whl.metadata (3.4 kB)
+Collecting jupyter-lsp>=2.0.0 (from jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 7))
+  Downloading jupyter_lsp-2.2.4-py3-none-any.whl.metadata (1.8 kB)
+Collecting traitlets (from jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 7))
+  Downloading traitlets-5.14.2-py3-none-any.whl.metadata (10 kB)
+Collecting contourpy>=1.0.1 (from matplotlib>=3.4.3->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 8))
+  Downloading contourpy-1.2.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.8 kB)
+Collecting cycler>=0.10 (from matplotlib>=3.4.3->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 8))
+  Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0 (from matplotlib>=3.4.3->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 8))
+  Downloading fonttools-4.50.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (159 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 159.4/159.4 kB 34.7 MB/s eta 0:00:00
+Collecting kiwisolver>=1.3.1 (from matplotlib>=3.4.3->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 8))
+  Downloading kiwisolver-1.4.5-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.4 kB)
+Collecting pyparsing>=2.3.1 (from matplotlib>=3.4.3->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 8))
+  Downloading pyparsing-3.1.2-py3-none-any.whl.metadata (5.1 kB)
+Collecting python-dateutil>=2.7 (from matplotlib>=3.4.3->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 8))
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting pandas>=1.2 (from seaborn>=0.11.2->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 9))
+  Downloading pandas-2.2.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (19 kB)
+Collecting comm>=0.1.3 (from ipywidgets>=7.6.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 10))
+  Downloading comm-0.2.2-py3-none-any.whl.metadata (3.7 kB)
+Collecting ipython>=6.1.0 (from ipywidgets>=7.6.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 10))
+  Downloading ipython-8.23.0-py3-none-any.whl.metadata (4.9 kB)
+Collecting widgetsnbextension~=4.0.10 (from ipywidgets>=7.6.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 10))
+  Downloading widgetsnbextension-4.0.10-py3-none-any.whl.metadata (1.6 kB)
+Collecting jupyterlab-widgets~=3.0.10 (from ipywidgets>=7.6.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 10))
+  Downloading jupyterlab_widgets-3.0.10-py3-none-any.whl.metadata (4.1 kB)
+Collecting aiohttp!=4.0.0a0,!=4.0.0a1 (from fsspec[http]>2021.06.0->pytorch-lightning==2.1.0->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 1))
+  Downloading aiohttp-3.9.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.4 kB)
+Collecting cachetools<6.0,>=2.0.0 (from google-auth<3,>=1.6.3->tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 2))
+  Downloading cachetools-5.3.3-py3-none-any.whl.metadata (5.3 kB)
+Collecting pyasn1-modules>=0.2.1 (from google-auth<3,>=1.6.3->tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 2))
+  Downloading pyasn1_modules-0.4.0-py3-none-any.whl.metadata (3.4 kB)
+Collecting rsa<5,>=3.1.4 (from google-auth<3,>=1.6.3->tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 2))
+  Downloading rsa-4.9-py3-none-any.whl.metadata (4.2 kB)
+Collecting requests-oauthlib>=0.7.0 (from google-auth-oauthlib<1.1,>=0.5->tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 2))
+  Downloading requests_oauthlib-2.0.0-py2.py3-none-any.whl.metadata (11 kB)
+Collecting anyio (from httpx>=0.25.0->jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 7))
+  Downloading anyio-4.3.0-py3-none-any.whl.metadata (4.6 kB)
+Requirement already satisfied: certifi in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from httpx>=0.25.0->jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 7)) (2024.2.2)
+Collecting httpcore==1.* (from httpx>=0.25.0->jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 7))
+  Downloading httpcore-1.0.5-py3-none-any.whl.metadata (20 kB)
+Requirement already satisfied: idna in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from httpx>=0.25.0->jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 7)) (3.6)
+Collecting sniffio (from httpx>=0.25.0->jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 7))
+  Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting h11<0.15,>=0.13 (from httpcore==1.*->httpx>=0.25.0->jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 7))
+  Downloading h11-0.14.0-py3-none-any.whl.metadata (8.2 kB)
+Collecting decorator (from ipython>=6.1.0->ipywidgets>=7.6.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 10))
+  Downloading decorator-5.1.1-py3-none-any.whl.metadata (4.0 kB)
+Collecting jedi>=0.16 (from ipython>=6.1.0->ipywidgets>=7.6.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 10))
+  Downloading jedi-0.19.1-py2.py3-none-any.whl.metadata (22 kB)
+Collecting matplotlib-inline (from ipython>=6.1.0->ipywidgets>=7.6.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 10))
+  Downloading matplotlib_inline-0.1.6-py3-none-any.whl.metadata (2.8 kB)
+Collecting prompt-toolkit<3.1.0,>=3.0.41 (from ipython>=6.1.0->ipywidgets>=7.6.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 10))
+  Downloading prompt_toolkit-3.0.43-py3-none-any.whl.metadata (6.5 kB)
+Collecting pygments>=2.4.0 (from ipython>=6.1.0->ipywidgets>=7.6.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 10))
+  Downloading pygments-2.17.2-py3-none-any.whl.metadata (2.6 kB)
+Collecting stack-data (from ipython>=6.1.0->ipywidgets>=7.6.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 10))
+  Downloading stack_data-0.6.3-py3-none-any.whl.metadata (18 kB)
+Collecting pexpect>4.3 (from ipython>=6.1.0->ipywidgets>=7.6.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 10))
+  Downloading pexpect-4.9.0-py2.py3-none-any.whl.metadata (2.5 kB)
+Requirement already satisfied: MarkupSafe>=2.0 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from jinja2>=3.0.3->jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 7)) (2.1.5)
+Collecting argon2-cffi (from jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading argon2_cffi-23.1.0-py3-none-any.whl.metadata (5.2 kB)
+Collecting jupyter-client>=7.4.4 (from jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading jupyter_client-8.6.1-py3-none-any.whl.metadata (8.3 kB)
+Collecting jupyter-events>=0.9.0 (from jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading jupyter_events-0.10.0-py3-none-any.whl.metadata (5.9 kB)
+Collecting jupyter-server-terminals (from jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading jupyter_server_terminals-0.5.3-py3-none-any.whl.metadata (5.6 kB)
+Collecting nbconvert>=6.4.4 (from jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading nbconvert-7.16.3-py3-none-any.whl.metadata (8.2 kB)
+Collecting nbformat>=5.3.0 (from jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading nbformat-5.10.4-py3-none-any.whl.metadata (3.6 kB)
+Collecting overrides (from jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading overrides-7.7.0-py3-none-any.whl.metadata (5.8 kB)
+Collecting prometheus-client (from jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading prometheus_client-0.20.0-py3-none-any.whl.metadata (1.8 kB)
+Collecting pyzmq>=24 (from jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading pyzmq-25.1.2-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (4.9 kB)
+Collecting send2trash>=1.8.2 (from jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading Send2Trash-1.8.2-py3-none-any.whl.metadata (4.0 kB)
+Collecting terminado>=0.8.3 (from jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading terminado-0.18.1-py3-none-any.whl.metadata (5.8 kB)
+Collecting websocket-client (from jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading websocket_client-1.7.0-py3-none-any.whl.metadata (7.9 kB)
+Collecting platformdirs>=2.5 (from jupyter-core->jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 7))
+  Downloading platformdirs-4.2.0-py3-none-any.whl.metadata (11 kB)
+Collecting babel>=2.10 (from jupyterlab-server<3,>=2.22.1->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading Babel-2.14.0-py3-none-any.whl.metadata (1.6 kB)
+Collecting json5>=0.9.0 (from jupyterlab-server<3,>=2.22.1->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading json5-0.9.24-py3-none-any.whl.metadata (30 kB)
+Collecting jsonschema>=4.18.0 (from jupyterlab-server<3,>=2.22.1->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading jsonschema-4.21.1-py3-none-any.whl.metadata (7.8 kB)
+Collecting pytz>=2020.1 (from pandas>=1.2->seaborn>=0.11.2->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 9))
+  Downloading pytz-2024.1-py2.py3-none-any.whl.metadata (22 kB)
+Collecting tzdata>=2022.7 (from pandas>=1.2->seaborn>=0.11.2->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 9))
+  Downloading tzdata-2024.1-py2.py3-none-any.whl.metadata (1.4 kB)
+Requirement already satisfied: charset-normalizer<4,>=2 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from requests<3,>=2.21.0->tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 2)) (3.3.2)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from requests<3,>=2.21.0->tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 2)) (2.2.1)
+Requirement already satisfied: filelock in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from torch>=1.12.0->pytorch-lightning==2.1.0->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 1)) (3.13.3)
+Requirement already satisfied: sympy in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from torch>=1.12.0->pytorch-lightning==2.1.0->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 1)) (1.12)
+Requirement already satisfied: networkx in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from torch>=1.12.0->pytorch-lightning==2.1.0->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 1)) (3.2.1)
+Collecting debugpy>=1.6.5 (from ipykernel->jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 7))
+  Downloading debugpy-1.8.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.1 kB)
+Collecting nest-asyncio (from ipykernel->jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 7))
+  Downloading nest_asyncio-1.6.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting psutil (from ipykernel->jupyterlab>=3.2.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 7))
+  Downloading psutil-5.9.8-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (21 kB)
+Collecting aiosignal>=1.1.2 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>2021.06.0->pytorch-lightning==2.1.0->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 1))
+  Downloading aiosignal-1.3.1-py3-none-any.whl.metadata (4.0 kB)
+Collecting attrs>=17.3.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>2021.06.0->pytorch-lightning==2.1.0->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 1))
+  Downloading attrs-23.2.0-py3-none-any.whl.metadata (9.5 kB)
+Collecting frozenlist>=1.1.1 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>2021.06.0->pytorch-lightning==2.1.0->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 1))
+  Downloading frozenlist-1.4.1-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (12 kB)
+Collecting multidict<7.0,>=4.5 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>2021.06.0->pytorch-lightning==2.1.0->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 1))
+  Downloading multidict-6.0.5-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.2 kB)
+Collecting yarl<2.0,>=1.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>2021.06.0->pytorch-lightning==2.1.0->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 1))
+  Downloading yarl-1.9.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (31 kB)
+Collecting parso<0.9.0,>=0.8.3 (from jedi>=0.16->ipython>=6.1.0->ipywidgets>=7.6.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 10))
+  Downloading parso-0.8.3-py2.py3-none-any.whl.metadata (7.5 kB)
+Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.22.1->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading jsonschema_specifications-2023.12.1-py3-none-any.whl.metadata (3.0 kB)
+Collecting referencing>=0.28.4 (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.22.1->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading referencing-0.34.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting rpds-py>=0.7.1 (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.22.1->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading rpds_py-0.18.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+Collecting python-json-logger>=2.0.4 (from jupyter-events>=0.9.0->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading python_json_logger-2.0.7-py3-none-any.whl.metadata (6.5 kB)
+Collecting rfc3339-validator (from jupyter-events>=0.9.0->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading rfc3339_validator-0.1.4-py2.py3-none-any.whl.metadata (1.5 kB)
+Collecting rfc3986-validator>=0.1.1 (from jupyter-events>=0.9.0->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading rfc3986_validator-0.1.1-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting beautifulsoup4 (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading beautifulsoup4-4.12.3-py3-none-any.whl.metadata (3.8 kB)
+Collecting bleach!=5.0.0 (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading bleach-6.1.0-py3-none-any.whl.metadata (30 kB)
+Collecting defusedxml (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
+Collecting jupyterlab-pygments (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading jupyterlab_pygments-0.3.0-py3-none-any.whl.metadata (4.4 kB)
+Collecting mistune<4,>=2.0.3 (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading mistune-3.0.2-py3-none-any.whl.metadata (1.7 kB)
+Collecting nbclient>=0.5.0 (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading nbclient-0.10.0-py3-none-any.whl.metadata (7.8 kB)
+Collecting pandocfilters>=1.4.1 (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading pandocfilters-1.5.1-py2.py3-none-any.whl.metadata (9.0 kB)
+Collecting tinycss2 (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading tinycss2-1.2.1-py3-none-any.whl.metadata (3.0 kB)
+Collecting fastjsonschema>=2.15 (from nbformat>=5.3.0->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading fastjsonschema-2.19.1-py3-none-any.whl.metadata (2.1 kB)
+Collecting ptyprocess>=0.5 (from pexpect>4.3->ipython>=6.1.0->ipywidgets>=7.6.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 10))
+  Downloading ptyprocess-0.7.0-py2.py3-none-any.whl.metadata (1.3 kB)
+Collecting wcwidth (from prompt-toolkit<3.1.0,>=3.0.41->ipython>=6.1.0->ipywidgets>=7.6.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 10))
+  Downloading wcwidth-0.2.13-py2.py3-none-any.whl.metadata (14 kB)
+Collecting pyasn1<0.7.0,>=0.4.6 (from pyasn1-modules>=0.2.1->google-auth<3,>=1.6.3->tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 2))
+  Downloading pyasn1-0.6.0-py2.py3-none-any.whl.metadata (8.3 kB)
+Collecting oauthlib>=3.0.0 (from requests-oauthlib>=0.7.0->google-auth-oauthlib<1.1,>=0.5->tensorboard==2.14.1->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 2))
+  Downloading oauthlib-3.2.2-py3-none-any.whl.metadata (7.5 kB)
+Collecting argon2-cffi-bindings (from argon2-cffi->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading argon2_cffi_bindings-21.2.0-cp36-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.7 kB)
+Collecting executing>=1.2.0 (from stack-data->ipython>=6.1.0->ipywidgets>=7.6.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 10))
+  Downloading executing-2.0.1-py2.py3-none-any.whl.metadata (9.0 kB)
+Collecting asttokens>=2.1.0 (from stack-data->ipython>=6.1.0->ipywidgets>=7.6.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 10))
+  Downloading asttokens-2.4.1-py2.py3-none-any.whl.metadata (5.2 kB)
+Collecting pure-eval (from stack-data->ipython>=6.1.0->ipywidgets>=7.6.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 10))
+  Downloading pure_eval-0.2.2-py3-none-any.whl.metadata (6.2 kB)
+Requirement already satisfied: mpmath>=0.19 in /home/scur0257/.conda/envs/atcs_2024/lib/python3.11/site-packages (from sympy->torch>=1.12.0->pytorch-lightning==2.1.0->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 1)) (1.3.0)
+Collecting webencodings (from bleach!=5.0.0->nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading webencodings-0.5.1-py2.py3-none-any.whl.metadata (2.1 kB)
+Collecting fqdn (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.9.0->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading fqdn-1.5.1-py3-none-any.whl.metadata (1.4 kB)
+Collecting isoduration (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.9.0->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading isoduration-20.11.0-py3-none-any.whl.metadata (5.7 kB)
+Collecting jsonpointer>1.13 (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.9.0->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading jsonpointer-2.4-py2.py3-none-any.whl.metadata (2.5 kB)
+Collecting uri-template (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.9.0->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading uri_template-1.3.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting webcolors>=1.11 (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.9.0->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading webcolors-1.13-py3-none-any.whl.metadata (2.6 kB)
+Collecting cffi>=1.0.1 (from argon2-cffi-bindings->argon2-cffi->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading cffi-1.16.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting soupsieve>1.2 (from beautifulsoup4->nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading soupsieve-2.5-py3-none-any.whl.metadata (4.7 kB)
+Collecting pycparser (from cffi>=1.0.1->argon2-cffi-bindings->argon2-cffi->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading pycparser-2.22-py3-none-any.whl.metadata (943 bytes)
+Collecting arrow>=0.15.0 (from isoduration->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.9.0->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading arrow-1.3.0-py3-none-any.whl.metadata (7.5 kB)
+Collecting types-python-dateutil>=2.8.10 (from arrow>=0.15.0->isoduration->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.9.0->jupyter-server<3,>=2.4.0->notebook>=6.4.5->-r /gpfs/home4/scur0257/practical_1/condaenv.jppynqy4.requirements.txt (line 6))
+  Downloading types_python_dateutil-2.9.0.20240316-py3-none-any.whl.metadata (1.8 kB)
+Downloading pytorch_lightning-2.1.0-py3-none-any.whl (774 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 774.6/774.6 kB 79.9 MB/s eta 0:00:00
+Downloading tensorboard-2.14.1-py3-none-any.whl (5.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.5/5.5 MB 25.2 MB/s eta 0:00:00
+Downloading tabulate-0.9.0-py3-none-any.whl (35 kB)
+Downloading tqdm-4.66.2-py3-none-any.whl (78 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.3/78.3 kB 19.2 MB/s eta 0:00:00
+Downloading pillow-10.3.0-cp311-cp311-manylinux_2_28_x86_64.whl (4.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 178.8 MB/s eta 0:00:00
+Downloading notebook-7.1.2-py3-none-any.whl (5.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 163.5 MB/s eta 0:00:00
+Downloading jupyterlab-4.1.5-py3-none-any.whl (11.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.4/11.4 MB 199.9 MB/s eta 0:00:00
+Downloading matplotlib-3.8.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.6/11.6 MB 190.1 MB/s eta 0:00:00
+Downloading seaborn-0.13.2-py3-none-any.whl (294 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 294.9/294.9 kB 56.3 MB/s eta 0:00:00
+Downloading ipywidgets-8.1.2-py3-none-any.whl (139 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 139.4/139.4 kB 31.9 MB/s eta 0:00:00
+Downloading absl_py-2.1.0-py3-none-any.whl (133 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.7/133.7 kB 33.4 MB/s eta 0:00:00
+Downloading async_lru-2.0.4-py3-none-any.whl (6.1 kB)
+Downloading comm-0.2.2-py3-none-any.whl (7.2 kB)
+Downloading contourpy-1.2.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (306 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 306.0/306.0 kB 61.0 MB/s eta 0:00:00
+Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Downloading fonttools-4.50.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.9/4.9 MB 187.8 MB/s eta 0:00:00
+Downloading fsspec-2024.3.1-py3-none-any.whl (171 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 172.0/172.0 kB 39.8 MB/s eta 0:00:00
+Downloading google_auth-2.29.0-py2.py3-none-any.whl (189 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 189.2/189.2 kB 43.2 MB/s eta 0:00:00
+Downloading google_auth_oauthlib-1.0.0-py2.py3-none-any.whl (18 kB)
+Downloading grpcio-1.62.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.5/5.5 MB 180.8 MB/s eta 0:00:00
+Downloading httpx-0.27.0-py3-none-any.whl (75 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 75.6/75.6 kB 18.3 MB/s eta 0:00:00
+Downloading httpcore-1.0.5-py3-none-any.whl (77 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 77.9/77.9 kB 19.3 MB/s eta 0:00:00
+Downloading ipython-8.23.0-py3-none-any.whl (814 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 814.2/814.2 kB 96.5 MB/s eta 0:00:00
+Downloading jupyter_lsp-2.2.4-py3-none-any.whl (69 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.1/69.1 kB 16.8 MB/s eta 0:00:00
+Downloading jupyter_server-2.13.0-py3-none-any.whl (383 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 383.2/383.2 kB 61.8 MB/s eta 0:00:00
+Downloading jupyter_core-5.7.2-py3-none-any.whl (28 kB)
+Downloading jupyterlab_server-2.25.4-py3-none-any.whl (58 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 59.0/59.0 kB 14.8 MB/s eta 0:00:00
+Downloading jupyterlab_widgets-3.0.10-py3-none-any.whl (215 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 215.0/215.0 kB 47.7 MB/s eta 0:00:00
+Downloading kiwisolver-1.4.5-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 130.4 MB/s eta 0:00:00
+Downloading lightning_utilities-0.11.2-py3-none-any.whl (26 kB)
+Downloading Markdown-3.6-py3-none-any.whl (105 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 105.4/105.4 kB 24.3 MB/s eta 0:00:00
+Downloading notebook_shim-0.2.4-py3-none-any.whl (13 kB)
+Downloading packaging-24.0-py3-none-any.whl (53 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.5/53.5 kB 13.3 MB/s eta 0:00:00
+Downloading pandas-2.2.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.0/13.0 MB 174.1 MB/s eta 0:00:00
+Downloading protobuf-5.26.1-cp37-abi3-manylinux2014_x86_64.whl (302 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 302.8/302.8 kB 49.0 MB/s eta 0:00:00
+Downloading pyparsing-3.1.2-py3-none-any.whl (103 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.2/103.2 kB 24.7 MB/s eta 0:00:00
+Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 48.3 MB/s eta 0:00:00
+Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+Downloading tensorboard_data_server-0.7.2-py3-none-any.whl (2.4 kB)
+Downloading torchmetrics-1.3.2-py3-none-any.whl (841 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 841.5/841.5 kB 97.8 MB/s eta 0:00:00
+Downloading tornado-6.4-cp38-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (435 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 435.4/435.4 kB 68.8 MB/s eta 0:00:00
+Downloading traitlets-5.14.2-py3-none-any.whl (85 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.4/85.4 kB 19.7 MB/s eta 0:00:00
+Downloading werkzeug-3.0.2-py3-none-any.whl (226 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 226.8/226.8 kB 46.5 MB/s eta 0:00:00
+Downloading widgetsnbextension-4.0.10-py3-none-any.whl (2.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 153.3 MB/s eta 0:00:00
+Downloading ipykernel-6.29.4-py3-none-any.whl (117 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 117.1/117.1 kB 27.3 MB/s eta 0:00:00
+Downloading aiohttp-3.9.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 123.8 MB/s eta 0:00:00
+Downloading anyio-4.3.0-py3-none-any.whl (85 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.6/85.6 kB 19.1 MB/s eta 0:00:00
+Downloading Babel-2.14.0-py3-none-any.whl (11.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.0/11.0 MB 210.1 MB/s eta 0:00:00
+Downloading cachetools-5.3.3-py3-none-any.whl (9.3 kB)
+Downloading debugpy-1.8.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.6/2.6 MB 148.4 MB/s eta 0:00:00
+Downloading jedi-0.19.1-py2.py3-none-any.whl (1.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 124.3 MB/s eta 0:00:00
+Downloading json5-0.9.24-py3-none-any.whl (30 kB)
+Downloading jsonschema-4.21.1-py3-none-any.whl (85 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.5/85.5 kB 21.8 MB/s eta 0:00:00
+Downloading jupyter_client-8.6.1-py3-none-any.whl (105 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 105.9/105.9 kB 25.0 MB/s eta 0:00:00
+Downloading jupyter_events-0.10.0-py3-none-any.whl (18 kB)
+Downloading matplotlib_inline-0.1.6-py3-none-any.whl (9.4 kB)
+Downloading nbconvert-7.16.3-py3-none-any.whl (257 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 257.4/257.4 kB 54.2 MB/s eta 0:00:00
+Downloading nbformat-5.10.4-py3-none-any.whl (78 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.5/78.5 kB 18.5 MB/s eta 0:00:00
+Downloading pexpect-4.9.0-py2.py3-none-any.whl (63 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.8/63.8 kB 16.1 MB/s eta 0:00:00
+Downloading platformdirs-4.2.0-py3-none-any.whl (17 kB)
+Downloading prompt_toolkit-3.0.43-py3-none-any.whl (386 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 386.1/386.1 kB 63.9 MB/s eta 0:00:00
+Downloading pyasn1_modules-0.4.0-py3-none-any.whl (181 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 181.2/181.2 kB 41.6 MB/s eta 0:00:00
+Downloading pygments-2.17.2-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 17.3 MB/s eta 0:00:00
+Downloading pytz-2024.1-py2.py3-none-any.whl (505 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 505.5/505.5 kB 77.0 MB/s eta 0:00:00
+Downloading pyzmq-25.1.2-cp311-cp311-manylinux_2_28_x86_64.whl (1.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 108.1 MB/s eta 0:00:00
+Downloading requests_oauthlib-2.0.0-py2.py3-none-any.whl (24 kB)
+Downloading rsa-4.9-py3-none-any.whl (34 kB)
+Downloading Send2Trash-1.8.2-py3-none-any.whl (18 kB)
+Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+Downloading terminado-0.18.1-py3-none-any.whl (14 kB)
+Downloading tzdata-2024.1-py2.py3-none-any.whl (345 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 345.4/345.4 kB 51.0 MB/s eta 0:00:00
+Downloading argon2_cffi-23.1.0-py3-none-any.whl (15 kB)
+Downloading decorator-5.1.1-py3-none-any.whl (9.1 kB)
+Downloading jupyter_server_terminals-0.5.3-py3-none-any.whl (13 kB)
+Downloading nest_asyncio-1.6.0-py3-none-any.whl (5.2 kB)
+Downloading overrides-7.7.0-py3-none-any.whl (17 kB)
+Downloading prometheus_client-0.20.0-py3-none-any.whl (54 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.5/54.5 kB 13.0 MB/s eta 0:00:00
+Downloading psutil-5.9.8-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (288 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 288.2/288.2 kB 51.3 MB/s eta 0:00:00
+Downloading stack_data-0.6.3-py3-none-any.whl (24 kB)
+Downloading websocket_client-1.7.0-py3-none-any.whl (58 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.5/58.5 kB 14.2 MB/s eta 0:00:00
+Downloading aiosignal-1.3.1-py3-none-any.whl (7.6 kB)
+Downloading asttokens-2.4.1-py2.py3-none-any.whl (27 kB)
+Downloading attrs-23.2.0-py3-none-any.whl (60 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.8/60.8 kB 14.8 MB/s eta 0:00:00
+Downloading bleach-6.1.0-py3-none-any.whl (162 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 162.8/162.8 kB 37.4 MB/s eta 0:00:00
+Downloading executing-2.0.1-py2.py3-none-any.whl (24 kB)
+Downloading fastjsonschema-2.19.1-py3-none-any.whl (23 kB)
+Downloading frozenlist-1.4.1-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (272 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 272.3/272.3 kB 52.9 MB/s eta 0:00:00
+Downloading h11-0.14.0-py3-none-any.whl (58 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.3/58.3 kB 12.8 MB/s eta 0:00:00
+Downloading jsonschema_specifications-2023.12.1-py3-none-any.whl (18 kB)
+Downloading mistune-3.0.2-py3-none-any.whl (47 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.0/48.0 kB 10.7 MB/s eta 0:00:00
+Downloading multidict-6.0.5-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (128 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 128.7/128.7 kB 25.1 MB/s eta 0:00:00
+Downloading nbclient-0.10.0-py3-none-any.whl (25 kB)
+Downloading oauthlib-3.2.2-py3-none-any.whl (151 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.7/151.7 kB 35.0 MB/s eta 0:00:00
+Downloading pandocfilters-1.5.1-py2.py3-none-any.whl (8.7 kB)
+Downloading parso-0.8.3-py2.py3-none-any.whl (100 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.8/100.8 kB 24.4 MB/s eta 0:00:00
+Downloading ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+Downloading pyasn1-0.6.0-py2.py3-none-any.whl (85 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.3/85.3 kB 20.7 MB/s eta 0:00:00
+Downloading python_json_logger-2.0.7-py3-none-any.whl (8.1 kB)
+Downloading referencing-0.34.0-py3-none-any.whl (26 kB)
+Downloading rfc3986_validator-0.1.1-py2.py3-none-any.whl (4.2 kB)
+Downloading rpds_py-0.18.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 115.9 MB/s eta 0:00:00
+Downloading yarl-1.9.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (328 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 328.1/328.1 kB 65.7 MB/s eta 0:00:00
+Downloading argon2_cffi_bindings-21.2.0-cp36-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (86 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 86.2/86.2 kB 21.6 MB/s eta 0:00:00
+Downloading beautifulsoup4-4.12.3-py3-none-any.whl (147 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 147.9/147.9 kB 37.4 MB/s eta 0:00:00
+Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+Downloading jupyterlab_pygments-0.3.0-py3-none-any.whl (15 kB)
+Downloading pure_eval-0.2.2-py3-none-any.whl (11 kB)
+Downloading rfc3339_validator-0.1.4-py2.py3-none-any.whl (3.5 kB)
+Downloading tinycss2-1.2.1-py3-none-any.whl (21 kB)
+Downloading wcwidth-0.2.13-py2.py3-none-any.whl (34 kB)
+Downloading cffi-1.16.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (464 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 464.8/464.8 kB 73.0 MB/s eta 0:00:00
+Downloading jsonpointer-2.4-py2.py3-none-any.whl (7.8 kB)
+Downloading soupsieve-2.5-py3-none-any.whl (36 kB)
+Downloading webcolors-1.13-py3-none-any.whl (14 kB)
+Downloading webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+Downloading fqdn-1.5.1-py3-none-any.whl (9.1 kB)
+Downloading isoduration-20.11.0-py3-none-any.whl (11 kB)
+Downloading uri_template-1.3.0-py3-none-any.whl (11 kB)
+Downloading arrow-1.3.0-py3-none-any.whl (66 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.4/66.4 kB 16.2 MB/s eta 0:00:00
+Downloading pycparser-2.22-py3-none-any.whl (117 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 117.6/117.6 kB 29.9 MB/s eta 0:00:00
+Downloading types_python_dateutil-2.9.0.20240316-py3-none-any.whl (9.7 kB)
+Installing collected packages: webencodings, wcwidth, pytz, pure-eval, ptyprocess, fastjsonschema, widgetsnbextension, werkzeug, websocket-client, webcolors, uri-template, tzdata, types-python-dateutil, traitlets, tqdm, tornado, tinycss2, tensorboard-data-server, tabulate, soupsieve, sniffio, six, send2trash, rpds-py, rfc3986-validator, pyzmq, python-json-logger, pyparsing, pygments, pycparser, pyasn1, psutil, protobuf, prompt-toolkit, prometheus-client, platformdirs, pillow, pexpect, parso, pandocfilters, packaging, overrides, oauthlib, nest-asyncio, multidict, mistune, markdown, kiwisolver, jupyterlab-widgets, jupyterlab-pygments, jsonpointer, json5, h11, grpcio, fsspec, frozenlist, fqdn, fonttools, executing, defusedxml, decorator, debugpy, cycler, contourpy, cachetools, babel, attrs, async-lru, absl-py, yarl, terminado, rsa, rfc3339-validator, requests-oauthlib, referencing, python-dateutil, pyasn1-modules, matplotlib-inline, lightning-utilities, jupyter-core, jedi, httpcore, comm, cffi, bleach, beautifulsoup4, asttokens, anyio, aiosignal, torchmetrics, stack-data, pandas, matplotlib, jupyter-server-terminals, jupyter-client, jsonschema-specifications, httpx, google-auth, arrow, argon2-cffi-bindings, aiohttp, seaborn, jsonschema, isoduration, ipython, google-auth-oauthlib, argon2-cffi, tensorboard, pytorch-lightning, nbformat, ipywidgets, ipykernel, nbclient, jupyter-events, nbconvert, jupyter-server, notebook-shim, jupyterlab-server, jupyter-lsp, jupyterlab, notebook
+  Attempting uninstall: pillow
+    Found existing installation: Pillow 9.4.0
+    Uninstalling Pillow-9.4.0:
+      Successfully uninstalled Pillow-9.4.0
+Successfully installed absl-py-2.1.0 aiohttp-3.9.3 aiosignal-1.3.1 anyio-4.3.0 argon2-cffi-23.1.0 argon2-cffi-bindings-21.2.0 arrow-1.3.0 asttokens-2.4.1 async-lru-2.0.4 attrs-23.2.0 babel-2.14.0 beautifulsoup4-4.12.3 bleach-6.1.0 cachetools-5.3.3 cffi-1.16.0 comm-0.2.2 contourpy-1.2.1 cycler-0.12.1 debugpy-1.8.1 decorator-5.1.1 defusedxml-0.7.1 executing-2.0.1 fastjsonschema-2.19.1 fonttools-4.50.0 fqdn-1.5.1 frozenlist-1.4.1 fsspec-2024.3.1 google-auth-2.29.0 google-auth-oauthlib-1.0.0 grpcio-1.62.1 h11-0.14.0 httpcore-1.0.5 httpx-0.27.0 ipykernel-6.29.4 ipython-8.23.0 ipywidgets-8.1.2 isoduration-20.11.0 jedi-0.19.1 json5-0.9.24 jsonpointer-2.4 jsonschema-4.21.1 jsonschema-specifications-2023.12.1 jupyter-client-8.6.1 jupyter-core-5.7.2 jupyter-events-0.10.0 jupyter-lsp-2.2.4 jupyter-server-2.13.0 jupyter-server-terminals-0.5.3 jupyterlab-4.1.5 jupyterlab-pygments-0.3.0 jupyterlab-server-2.25.4 jupyterlab-widgets-3.0.10 kiwisolver-1.4.5 lightning-utilities-0.11.2 markdown-3.6 matplotlib-3.8.4 matplotlib-inline-0.1.6 mistune-3.0.2 multidict-6.0.5 nbclient-0.10.0 nbconvert-7.16.3 nbformat-5.10.4 nest-asyncio-1.6.0 notebook-7.1.2 notebook-shim-0.2.4 oauthlib-3.2.2 overrides-7.7.0 packaging-24.0 pandas-2.2.1 pandocfilters-1.5.1 parso-0.8.3 pexpect-4.9.0 pillow-10.3.0 platformdirs-4.2.0 prometheus-client-0.20.0 prompt-toolkit-3.0.43 protobuf-5.26.1 psutil-5.9.8 ptyprocess-0.7.0 pure-eval-0.2.2 pyasn1-0.6.0 pyasn1-modules-0.4.0 pycparser-2.22 pygments-2.17.2 pyparsing-3.1.2 python-dateutil-2.9.0.post0 python-json-logger-2.0.7 pytorch-lightning-2.1.0 pytz-2024.1 pyzmq-25.1.2 referencing-0.34.0 requests-oauthlib-2.0.0 rfc3339-validator-0.1.4 rfc3986-validator-0.1.1 rpds-py-0.18.0 rsa-4.9 seaborn-0.13.2 send2trash-1.8.2 six-1.16.0 sniffio-1.3.1 soupsieve-2.5 stack-data-0.6.3 tabulate-0.9.0 tensorboard-2.14.1 tensorboard-data-server-0.7.2 terminado-0.18.1 tinycss2-1.2.1 torchmetrics-1.3.2 tornado-6.4 tqdm-4.66.2 traitlets-5.14.2 types-python-dateutil-2.9.0.20240316 tzdata-2024.1 uri-template-1.3.0 wcwidth-0.2.13 webcolors-1.13 webencodings-0.5.1 websocket-client-1.7.0 werkzeug-3.0.2 widgetsnbextension-4.0.10 yarl-1.9.4
+
+done
+#
+# To activate this environment, use
+#
+#     $ conda activate atcs_2024
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+
+JOB STATISTICS
+==============
+Job ID: 5791363
+Cluster: snellius
+User/Group: scur0257/scur0257
+State: RUNNING
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:00:00
+CPU Efficiency: 0.00% of 03:00:18 core-walltime
+Job Wall-clock time: 00:10:01
+Memory Utilized: 0.00 MB (estimated maximum)
+Memory Efficiency: 0.00% of 120.00 GB (120.00 GB/node)
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.

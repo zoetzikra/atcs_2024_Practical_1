@@ -77,7 +77,7 @@ class LSTMEncoder(nn.Module):
         sorted_sentences = torch.index_select(sentences, dim=0, index=sorted_indices)
         
         # pack the sequences to a more compact version (without the padding) for more efficient processing
-        packed_sentences = nn.utils.rnn.pack_padded_sequence(sorted_sentences, sorted_lengths, batch_first=True)
+        packed_sentences = nn.utils.rnn.pack_padded_sequence(sorted_sentences, sorted_lengths.cpu(), batch_first=True)
         
         # forward pass through LSTM; we don't care about the packed sequence outputs and the output cell states
         _, (hidden_states, _) = self.lstm(packed_sentences, (self.hidden_state, self.cell_state))
@@ -131,6 +131,7 @@ class BiLSTMEncoder(nn.Module):
 
         # sort the embeddings on sentence length
         sorted_lengths, sorted_indices= torch.sort(sentence_lengths, descending=True)
+        sorted_indices = sorted_indices.to(sentences.device)
         sorted_sentences = torch.index_select(sentences, dim=0, index=sorted_indices)
 
 
@@ -143,11 +144,11 @@ class BiLSTMEncoder(nn.Module):
 
         if self.pooling == 'max':
             # pad the output hidden states
-            output, _ = nn.utils.rnn.pad_packed_sequence(hidden_states, batch_first=True)
+            output, _ = nn.utils.rnn.pad_packed_sequence(output, batch_first=True)
 
             # apply max pooling
             max_sentences = []
-            for sentence, length in zip(hidden_states, sentence_lengths):
+            for sentence, length in zip(output, sentence_lengths):
                 # again, take only the sentence without the padding
                 sentence = sentence[:length]
 
@@ -174,11 +175,39 @@ class BiLSTMEncoder(nn.Module):
 
         # unsort the embeddings
         ordered_indices_sequential_numbers, reconstruction_indices = torch.sort(sorted_indices)
+        reconstruction_indices = reconstruction_indices.to(hidden_states.device)
         hidden_states = torch.index_select(hidden_states, dim=0, index=reconstruction_indices) 
 
         # return the sentence representations
         return hidden_states
 
+'''
+From  the paper:
+For the classifier, we use a multi-layer perceptron with 1 hidden-layer of 512 hidden units.
+'''
+# THE CLASSIFIERS ARE WRITTEN UNDER THE ASSUMPTION THAT 
+# THE INPUT SENTENCES ARE ALREADY PROCESSED BY THE ENCODER
+
+class MLP_classifier(nn.Module):
+    def __init__(self, input_dim=4*300):
+        super().__init__()
+
+        self.classifier = nn.Sequential(
+                nn.Linear(input_dim, 512),
+                nn.Linear(512, 512),
+                nn.Linear(512, 3),
+            )
+        
+    def forward(self, sentence_embeddings):
+        """
+        Inputs:
+            sentence_embeddings - Tensor of sentence representations of shape varying shape. AWE is [B, 4*300]
+        Outputs:
+            predictions - Tensor of predictions (entailment, neutral, contradiction) of shape [B, 3]
+        """
+        output = self.classifier(sentence_embeddings) 
+
+        return output
 
 '''
 From  the paper:

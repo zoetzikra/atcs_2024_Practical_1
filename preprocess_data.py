@@ -3,6 +3,8 @@ import numpy as np
 import torch
 from torchtext import data, datasets
 from nltk.tokenize import word_tokenize
+import nltk
+nltk.download('punkt')
 from torch.nn.utils.rnn import pad_sequence
 from torch.utils.data import DataLoader
 
@@ -12,18 +14,11 @@ from torchtext.vocab import Vocab
 from collections import Counter
 
 GLOVE_PATH = "GloVe_embeds.nosync/glove.840B.300d.txt"
+
 # "/Users/zoetzikra/Documents/2023-2024/ATCS/practical_1/GloVe_embeds/glove.840B.300d.txt"
 
 # the vectors from glove come as a string of space separated numbers
 # np.fromstring converts this into a numpy array
-# we only load the glove vectors from the words in the dictionary that comes from the sentence batch?
-# def load_glove_vectors(glove_path):
-#      word_vectors = {}
-#      with open(glove_path) as f:
-#           for line in f:
-#                word, vec = line.split(' ', 1)
-#                word_vectors[word] = np.fromstring(vec, sep=' ')
-#      return word_vectors
 def load_glove_vectors(glove_path, w2i):
      word_vectors = {}
      with open(glove_path) as f:
@@ -64,6 +59,7 @@ def build_vocab_embeddings(sentences, glove_path):
      return vocab, index_to_vector
 
 
+# NOTE: This is not used in the end
 # This function returns a tensor of the batch of sentences and a list of the lengths of the sentences in the batch
 # sentences in decreasing order of lengths (bsize, max_len, word_dim)
 def get_batch(batch, vocab_vectors):
@@ -98,12 +94,6 @@ def collate_fn(batch, vocab):
      hypotheses = [example['hypothesis'] for example in batch]
      labels = [example['label'] for example in batch]
      
-
-     # premises = [torch.tensor([vocab.vectors[vocab.stoi[word]] for word in p if word in vocab.stoi.keys()]) for p in premises]
-     # hypotheses = [torch.tensor([vocab.vectors[vocab.stoi[word]] for word in h if word in vocab.stoi.keys()]) for h in hypotheses]
-     # premises = [torch.stack([vocab.vectors[vocab.stoi[word]] for word in p if word in vocab.stoi]) for p in premises]
-     # hypotheses = [torch.stack([vocab.vectors[vocab.stoi[word]] for word in h if word in vocab.stoi]) for h in hypotheses]
-     
      # Convert words to their indices in the vocabulary
      premises = [torch.tensor([vocab.stoi[word] for word in p if word in vocab.stoi]) for p in premises]
      hypotheses = [torch.tensor([vocab.stoi[word] for word in h if word in vocab.stoi]) for h in hypotheses]
@@ -111,7 +101,7 @@ def collate_fn(batch, vocab):
      premises = [p for i, p in enumerate(premises) if labels[i] != -1]
      hypotheses = [h for i, h in enumerate(hypotheses) if labels[i] != -1]
      labels = [l for l in labels if l != -1]
-     print("labels processed:", labels)
+     # print("labels processed:", labels)
 
      # Pad sequences BUT save and return the original lengths of the sequences
      original_lengths_p = [len(p) for p in premises]
@@ -121,20 +111,17 @@ def collate_fn(batch, vocab):
      premises_padded = combined_padded[:len(premises)]
      hypotheses_padded = combined_padded[len(premises):]
 
-     # print("length of the first 10 premises: ", [len(p) for p in premises_padded[:10]])
-     # print("one hypothesis example: ", hypotheses_padded[0])
-     # print("length of the first 10 hypotheses: ", [len(h) for h in hypotheses_padded[:10]])
      return (premises_padded, hypotheses_padded, original_lengths_p, original_lengths_h), labels
 
 
+
 # function that loads the SNLI dataset
-def load_snli(batch_size=64, development=False, return_label_vocab=False):
+def load_snli(batch_size=64, development=False):
      """
      Inputs:
-          device - Torchtext device to use. Default is None (use CUDA)
           batch_size - Size of the batches. Default is 64
           development - Whether to use development dataset. Default is False
-          return_label_vocab - Whether to return the label vocab. Default is False
+
      Outputs:
           vocab - GloVe embedding vocabulary from the alignment
           train_iter - BucketIterator of training batches
@@ -148,7 +135,7 @@ def load_snli(batch_size=64, development=False, return_label_vocab=False):
      dev_dataset = dataset['validation']
      test_dataset = dataset['test']
      if development: #we want to keep the dataset small for development.
-          # we tak ethe first 64*400 examples from the training dataset, 64*100 from the dev dataset and 64*100 from the test dataset
+          # we tak ethe first 64*100 examples from the training dataset, 64*50 from the dev dataset and 64*50 from the test dataset
           train_dataset = train_dataset.select(range(64*400))
           dev_dataset = dev_dataset.select(range(64*100))
           test_dataset = test_dataset.select(range(64*100))
@@ -162,14 +149,11 @@ def load_snli(batch_size=64, development=False, return_label_vocab=False):
      # build the vocabulary of the dataset
      sentences = [sentence for dataset in [train_dataset, dev_dataset, test_dataset] for sentence in dataset]
      vocab, index_to_vector = build_vocab_embeddings(sentences, GLOVE_PATH)
+     
 
      # create batch iterators for the datasets
-     train_iter = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, collate_fn=lambda b: collate_fn(b, vocab))
-     dev_iter = DataLoader(dev_dataset, batch_size=batch_size, shuffle=False, collate_fn=lambda b: collate_fn(b, vocab))
-     test_iter = DataLoader(test_dataset, batch_size=batch_size, shuffle=False, collate_fn=lambda b: collate_fn(b, vocab))
+     train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, collate_fn=lambda b: collate_fn(b, vocab))
+     dev_loader = DataLoader(dev_dataset, batch_size=batch_size, shuffle=False, collate_fn=lambda b: collate_fn(b, vocab))
+     test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False, collate_fn=lambda b: collate_fn(b, vocab))
 
-     if return_label_vocab:
-          label_vocab = {'entailment': 0, 'neutral': 1, 'contradiction': 2}
-          return vocab, train_iter, dev_iter, test_iter, label_vocab
-
-     return vocab, train_iter, dev_iter, test_iter
+     return vocab, train_loader, dev_loader, test_loader

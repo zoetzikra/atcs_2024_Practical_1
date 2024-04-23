@@ -1,0 +1,78 @@
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+[nltk_data] Downloading package punkt to /home/scur0257/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+2024-04-22 20:58:31,022 : open file: /gpfs/home4/scur0257/practical_1/practical_1/pl_logs/lightning_logs/version_6013424/checkpoints/epoch=8-step=77373.ckpt
+2024-04-22 20:58:31,727 : ***** Transfer task : STS14 *****
+
+
+GLOVE_PATH: ./SentEval/pretrained/glove.840B.300d.txt
+Warning: skipping sentence_dict task_path because it is not in the expected format
+Warning: skipping sentence_dict usepytorch because it is not in the expected format
+Warning: skipping sentence_dict kfold because it is not in the expected format
+Warning: skipping sentence_dict classifier because it is not in the expected format
+Warning: skipping sentence_dict seed because it is not in the expected format
+Warning: skipping sentence_dict batch_size because it is not in the expected format
+Warning: skipping sentence_dict nhid because it is not in the expected format
+Warning: skipping sentence_dict current_task because it is not in the expected format
+Found 3 words with word vectors, out of 3 words
+Model:  NLIModule(
+  (encoder): AWEsEncoder()
+  (classifier): MLP_classifier(
+    (classifier): Sequential(
+      (0): Linear(in_features=1200, out_features=512, bias=True)
+      (1): Linear(in_features=512, out_features=512, bias=True)
+      (2): Linear(in_features=512, out_features=3, bias=True)
+    )
+  )
+  (loss_module): CrossEntropyLoss()
+  (glove_embeddings): Embedding(37213, 300)
+)
+Traceback (most recent call last):
+  File "/gpfs/home4/scur0257/practical_1/practical_1/senteval.py", line 183, in <module>
+    results = se.eval(transfer_tasks)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/home4/scur0257/practical_1/practical_1/./SentEval/senteval/engine.py", line 59, in eval
+    self.results = {x: self.eval(x) for x in name}
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/home4/scur0257/practical_1/practical_1/./SentEval/senteval/engine.py", line 59, in <dictcomp>
+    self.results = {x: self.eval(x) for x in name}
+                       ^^^^^^^^^^^^
+  File "/gpfs/home4/scur0257/practical_1/practical_1/./SentEval/senteval/engine.py", line 121, in eval
+    self.results = self.evaluation.run(self.params, self.batcher)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/home4/scur0257/practical_1/practical_1/./SentEval/senteval/sts.py", line 76, in run
+    enc1 = batcher(params, batch1)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/home4/scur0257/practical_1/practical_1/senteval.py", line 101, in get_batch
+    if word in vocab_vectors:
+       ^^^^^^^^^^^^^^^^^^^^^
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+
+JOB STATISTICS
+==============
+Job ID: 6014274
+Cluster: snellius
+User/Group: scur0257/scur0257
+State: RUNNING
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:00:00
+CPU Efficiency: 0.00% of 00:06:36 core-walltime
+Job Wall-clock time: 00:00:22
+Memory Utilized: 0.00 MB (estimated maximum)
+Memory Efficiency: 0.00% of 120.00 GB (120.00 GB/node)
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.
